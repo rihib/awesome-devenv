@@ -1,0 +1,19 @@
+{
+    // Project
+    // General
+    "remote.SSH.defaultExtensions": [
+        // Git
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+    ],
+    "dev.containers.defaultExtensions": [
+        // Git
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+    ],
+    "cSpell.ignoreWords": [
+        // アルファベット順
+        "eamodio",
+        "mhutchie",
+    ],
+}
