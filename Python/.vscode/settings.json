@@ -1,0 +1,29 @@
+{
+    // Project
+    // General
+    "remote.SSH.defaultExtensions": [
+        // Python
+        "ms-python.python",
+        "njpwerner.autodocstring",
+    ],
+    "dev.containers.defaultExtensions": [
+        // Python
+        "ms-python.python",
+        "njpwerner.autodocstring",
+    ],
+    "cSpell.ignoreWords": [
+        // アルファベット順
+        "autodocstring",
+        "davidanson",
+        "isort",
+        "mypy",
+        "njpwerner",
+    ],
+    // Python
+    "python.formatting.provider": "black",
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.banditEnabled": true,
+    "isort.check": true,
+    "isort.showNotifications": "onWarning",
+}
