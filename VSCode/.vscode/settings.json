@@ -1,0 +1,72 @@
+{
+    // Personal（個人のお好みで）
+    "workbench.colorTheme": "Default Light+",
+    "workbench.startupEditor": "none",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.autoIndent": "brackets",
+    "editor.fontSize": 14,
+    "material-icon-theme.activeIconPack": "react",
+    "window.zoomLevel": 1,
+    // Project
+    // General
+    "remote.SSH.defaultExtensions": [
+        // General
+        "christian-kohler.path-intellisense",
+        "ms-ceintl.vscode-language-pack-ja",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "ms-vsliveshare.vsliveshare",
+        "oderwat.indent-rainbow",
+        "pkief.material-icon-theme",
+        "ritwickdey.liveserver",
+        "shardulm94.trailing-spaces",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens",
+        "wayou.vscode-todo-highlight",
+        // Prettier
+        "esbenp.prettier-vscode",
+    ],
+    "dev.containers.defaultExtensions": [
+        // General
+        "christian-kohler.path-intellisense",
+        "ms-ceintl.vscode-language-pack-ja",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "ms-vsliveshare.vsliveshare",
+        "oderwat.indent-rainbow",
+        "pkief.material-icon-theme",
+        "ritwickdey.liveserver",
+        "shardulm94.trailing-spaces",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens",
+        "wayou.vscode-todo-highlight",
+        // Prettier
+        "esbenp.prettier-vscode",
+    ],
+    "liveServer.settings.donotVerifyTags": true,
+    "files.autoGuessEncoding": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "files.insertFinalNewline": true,
+    "cSpell.ignoreWords": [
+        // アルファベット順
+        "ceintl",
+        "donot",
+        "errorlens",
+        "esbenp",
+        "extensionpack",
+        "kohler",
+        "liveserver",
+        "oderwat",
+        "pkief",
+        "ritwickdey",
+        "shardulm",
+        "usernamehw",
+        "wayou",
+    ],
+    // Prettier
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": true,
+}
