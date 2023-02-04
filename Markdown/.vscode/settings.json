@@ -1,0 +1,20 @@
+{
+    // Project
+    // General
+    "remote.SSH.defaultExtensions": [
+        // Markdown
+        "davidanson.vscode-markdownlint",
+        "shd101wyy.markdown-preview-enhanced",
+        "yzhang.markdown-all-in-one",
+    ],
+    "dev.containers.defaultExtensions": [
+        // Markdown
+        "davidanson.vscode-markdownlint",
+        "shd101wyy.markdown-preview-enhanced",
+        "yzhang.markdown-all-in-one",
+    ],
+    "cSpell.ignoreWords": [
+        // アルファベット順
+        "yzhang",
+    ],
+}
