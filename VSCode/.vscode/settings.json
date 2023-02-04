@@ -1,16 +1,4 @@
 {
-    // Personal（個人のお好みで）
-    "workbench.colorTheme": "Default Light+",
-    "workbench.startupEditor": "none",
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.autoIndent": "brackets",
-    "editor.fontSize": 14,
-    "material-icon-theme.activeIconPack": "react",
-    "window.zoomLevel": 1,
     // Project
     // General
     "remote.SSH.defaultExtensions": [
