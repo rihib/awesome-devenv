@@ -1,0 +1,16 @@
+{
+    // Project
+    // General
+    "remote.SSH.defaultExtensions": [
+        // CSV, TSV
+        "mechatroner.rainbow-csv",
+    ],
+    "dev.containers.defaultExtensions": [
+        // CSV, TSV
+        "mechatroner.rainbow-csv",
+    ],
+    "cSpell.ignoreWords": [
+        // アルファベット順
+        "mechatroner",
+    ],
+}
