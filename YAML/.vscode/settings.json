@@ -1,0 +1,12 @@
+{
+    // Project
+    // General
+    "remote.SSH.defaultExtensions": [
+        // YAML
+        "redhat.vscode-yaml",
+    ],
+    "dev.containers.defaultExtensions": [
+        // YAML
+        "redhat.vscode-yaml",
+    ],
+}
