@@ -1,0 +1,16 @@
+{
+    // Project
+    // General
+    "remote.SSH.defaultExtensions": [
+        // Docker
+        "ms-azuretools.vscode-docker",
+    ],
+    "dev.containers.defaultExtensions": [
+        // Docker
+        "ms-azuretools.vscode-docker",
+    ],
+    "cSpell.ignoreWords": [
+        // アルファベット順
+        "azuretools",
+    ],
+}
