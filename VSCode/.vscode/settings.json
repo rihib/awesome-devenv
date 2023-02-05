@@ -14,8 +14,6 @@
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens",
         "wayou.vscode-todo-highlight",
-        // Prettier
-        "esbenp.prettier-vscode",
     ],
     "dev.containers.defaultExtensions": [
         // General
@@ -30,8 +28,6 @@
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens",
         "wayou.vscode-todo-highlight",
-        // Prettier
-        "esbenp.prettier-vscode",
     ],
     "liveServer.settings.donotVerifyTags": true,
     "files.autoGuessEncoding": true,
@@ -43,7 +39,6 @@
         "ceintl",
         "donot",
         "errorlens",
-        "esbenp",
         "extensionpack",
         "kohler",
         "liveserver",
@@ -54,7 +49,4 @@
         "usernamehw",
         "wayou",
     ],
-    // Prettier
-    "prettier.tabWidth": 4,
-    "prettier.useTabs": true,
 }

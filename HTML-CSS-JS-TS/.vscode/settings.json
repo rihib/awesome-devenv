@@ -1,0 +1,19 @@
+{
+    // Project
+    // General
+    "remote.SSH.defaultExtensions": [
+        // Prettier
+        "esbenp.prettier-vscode",
+    ],
+    "dev.containers.defaultExtensions": [
+        // Prettier
+        "esbenp.prettier-vscode",
+    ],
+    "cSpell.ignoreWords": [
+        // アルファベット順
+        "esbenp",
+    ],
+    // Prettier
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": true,
+}
