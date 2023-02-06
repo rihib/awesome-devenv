@@ -5,7 +5,6 @@
         // General
         "christian-kohler.path-intellisense",
         "davidanson.vscode-markdownlint",
-        "eamodio.gitlens",
         "mhutchie.git-graph",
         "ms-ceintl.vscode-language-pack-ja",
         "ms-vscode-remote.vscode-remote-extensionpack",
@@ -20,6 +19,11 @@
         "usernamehw.errorlens",
         "wayou.vscode-todo-highlight",
         "yzhang.markdown-all-in-one",
+        // Git
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        // GitHub
+        "github.vscode-pull-request-github",
         // Prettier
         "esbenp.prettier-vscode",
     ],
@@ -27,7 +31,6 @@
         // General
         "christian-kohler.path-intellisense",
         "davidanson.vscode-markdownlint",
-        "eamodio.gitlens",
         "mhutchie.git-graph",
         "ms-ceintl.vscode-language-pack-ja",
         "ms-vscode-remote.vscode-remote-extensionpack",
@@ -42,6 +45,11 @@
         "usernamehw.errorlens",
         "wayou.vscode-todo-highlight",
         "yzhang.markdown-all-in-one",
+        // Git
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        // GitHub
+        "github.vscode-pull-request-github",
         // Prettier
         "esbenp.prettier-vscode",
     ],
@@ -73,6 +81,7 @@
         "liveserver",
         "luaenv",
         "mhutchie",
+        "mkdocs",
         "nodenv",
         "oderwat",
         "phpenv",
@@ -81,6 +90,8 @@
         "popd",
         "pushd",
         "pyenv",
+        "pyproject",
+        "pytest",
         "Renv",
         "ritwickdey",
         "shardulm",
@@ -89,6 +100,9 @@
         "swiftenv",
         "tfenv",
         "usernamehw",
+        "venv",
+        "virtualenv",
+        "virtualenvs",
         "wayou",
         "yzhang",
     ],
