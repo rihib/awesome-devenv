@@ -1,0 +1,12 @@
+{
+    // Project
+    // General
+    "remote.SSH.defaultExtensions": [
+        // GitHub
+        "github.vscode-pull-request-github",
+    ],
+    "dev.containers.defaultExtensions": [
+        // GitHub
+        "github.vscode-pull-request-github",
+    ],
+}
