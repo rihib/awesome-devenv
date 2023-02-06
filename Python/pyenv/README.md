@@ -15,7 +15,7 @@ anyenvを使ってインストールする。詳細は`anyenv/README.md`を参�
 `$PYENV_ROOT`には、`.anyenv`下にインストールしたpyenvのパスを指定していることに注意。
 
 ```bash
-echo 'export PYENV_ROOT="$HOME/.anyenv/envs/pyenv"' >> <FILE_PASS>
+echo 'export PYENV_ROOT="<HOME_PATH>/.anyenv/envs/pyenv"' >> <FILE_PASS>
 echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> <FILE_PASS>
 echo 'eval "$(pyenv init -)"' >> <FILE_PASS>
 ```
@@ -51,7 +51,7 @@ pyenv 2.3.12-6-gc8c324af
 
 ### `versions`や`shims`が保存されているルートディレクトリのパスを表示
 
-`$HOME/.anyenv/envs/pyenv`と表示されるか確認。`$HOME/.pyenv`と表示された場合は`$PYENV_ROOT`の値が前述した通りに設定されていない。
+`<HOME_PATH>/.anyenv/envs/pyenv`と表示されるか確認。`<HOME_PATH>/.pyenv`と表示された場合は`$PYENV_ROOT`の値が前述した通りに設定されていない。
 
 ```bash
 $ pyenv root
@@ -73,7 +73,7 @@ pyenv rehash
 
 ### インストールしたPythonバージョンの一覧を表示
 
-それぞれのバージョンがインストールされているディレクトリのパスも表示される（`$HOME/.anyenv/envs/pyenv/versions/<PYTHON_VERSION>`と表示されるはず。`$HOME/.pyenv/versions/<PYTHON_VERSION>`と表示された場合は`$PYENV_ROOT`の値が前述した通りに設定されていない。）。
+それぞれのバージョンがインストールされているディレクトリのパスも表示される（`<HOME_PATH>/.anyenv/envs/pyenv/versions/<PYTHON_VERSION>`と表示されるはず。`<HOME_PATH>/.pyenv/versions/<PYTHON_VERSION>`と表示された場合は`$PYENV_ROOT`の値が前述した通りに設定されていない。）。
 
 ```bash
 pyenv versions
