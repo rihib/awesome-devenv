@@ -31,6 +31,16 @@ $ anyenv -v
 anyenv 1.1.5-1-g5c58783
 ```
 
+## 特定のバージョンのanyenvに変更する
+
+```bash
+pushd $(anyenv root)
+git fetch
+git tag    # 利用できるタグの一覧を表示
+git checkout v1.1.5
+popd
+```
+
 ## anyenv-updateのインストール
 
 anyenvにて管理しているすべての**envとプラグインを一括でアップデートできる`anyenv update`コマンドを提供するanyenvのプラグイン。
@@ -38,6 +48,16 @@ anyenvにて管理しているすべての**envとプラグインを一括でア
 ```bash
 mkdir -p $(anyenv root)/plugins
 git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
+```
+
+## 特定のバージョンのanyenv-updateに変更する
+
+```bash
+pushd $(anyenv root)/plugins/anyenv-update
+git fetch
+git tag    # 利用できるタグの一覧を表示
+git checkout v1.2.0
+popd
 ```
 
 ## コマンド
