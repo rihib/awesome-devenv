@@ -3,10 +3,12 @@
 ## anyenvのインストール
 
 ```bash
-$ git clone https://github.com/anyenv/anyenv ~/.anyenv
-$ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile    # bashを使用している場合。他のシェルを使用している場合は公式ドキュメントを参照
+$ git clone https://github.com/anyenv/anyenv <PRJ_ROOT>/.venv/anyenv
+$ echo 'export PATH="<PRJ_ROOT>/.venv/anyenv/bin:$PATH"' >> ~/.bashrc
+$ echo 'export PATH="<PRJ_ROOT>/.venv/anyenv/bin:$PATH"' >> ~/.bash_profile
+$ echo 'export PATH="<PRJ_ROOT>/.venv/anyenv/bin:$PATH"' >> ~/.profile
 $ exec $SHELL -l
-$ ~/.anyenv/bin/anyenv init
+$ <PRJ_ROOT>/.venv/anyenv/bin/anyenv init
 # Load anyenv automatically by adding
 # the following to ~/.bash_profile:
 
