@@ -23,6 +23,5 @@
 
 ## インスタンスに再接続する
 
-1. Cloud9を開き、`Manage EC2 Instance`を押して、EC2インスタンスの管理画面に行き、IPv4アドレスをコピー
-2. ローカルの`~/.ssh/config`のcloud9のIPアドレスを作成したEC2のものに変更
+1. ローカルの`~/.ssh/config`のcloud9のIPアドレスを作成したEC2のものに変更
 3. VSCodeからCloud9にSSH接続（途中、表示されるダイアログでは「続行」を押す」）
