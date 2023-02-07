@@ -1,0 +1,11 @@
+{
+    // Project
+    // General
+    "cSpell.ignoreWords": [
+        // アルファベット順
+        "firstparty",
+        "localfolder",
+        "stdlib",
+        "thirdparty",
+    ],
+}
