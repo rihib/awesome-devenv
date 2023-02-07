@@ -28,15 +28,17 @@ echo 'export PATH=<HOME_PATH>/.poetry/bin:$PATH' >> ~/.profile
 `poetry.lock`がない状態で`poetry install`を実行すると、`pyproject.toml`で指定した条件の中で一番最新のバージョンが`poetry.lock`に書き込まれて、仮想環境にインストールされる。`poetry.lock`がある状態で`poetry install`を実行されると、`poetry.lock`に記述されているバージョンが正確に仮想環境にインストールされる。そのため、バージョンの一貫性は保たれるので、最初にパッケージをインストールする際や、`pyproject.toml`にバージョンを記述する際は、必要がなければバージョンを指定する必要はない。
 
 ```bash
-$ mkdir <PRJ_ROOT_DIR>
-$ cd <PRJ_ROOT_DIR>
+$ mkdir <PRJ_ROOT>
+$ cd <PRJ_ROOT>
+$ poetry virtualenvs.in-project true --local
+$ mkdir .venv
 $ poetry virtualenvs.prefer-active-python true --local
 $ pyenv local <PYTHON_VERSION>
 $ poetry init
 
 This command will guide you through creating your pyproject.toml config.
 
-Package name [<PRJ_ROOT_DIR>]:  <PACKAGE_NAME>
+Package name [<PRJ_ROOT>]:  <PACKAGE_NAME>
 Version [0.1.0]:  <VERSION>
 Description []:  <DESCRIPTION>
 Author [John Smith <johnsmith@example.org>, n to skip]:  John Smith <johnsmith@example.org>
@@ -107,7 +109,7 @@ poetry install --with test,docs
 poetry install --with test,docs --without docs
 ```
 
-### mainグループ
+### `main`グループ
 
 通常、特に指定がない限りは、パッケージは`main`グループに属する。`main`グループは暗黙的に宣言されているので、`pyproject.toml`で直接的には宣言されていない。
 
