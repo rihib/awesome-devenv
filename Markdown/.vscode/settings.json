@@ -17,4 +17,7 @@
         // アルファベット順
         "yzhang",
     ],
+    "markdownlint.config": {
+        "MD033": false,
+    }
 }
