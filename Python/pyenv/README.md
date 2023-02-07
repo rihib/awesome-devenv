@@ -18,19 +18,18 @@ exec $SHELL -l
 `$PYENV_ROOT`には、`.anyenv`下にインストールしたpyenvのパスを指定していることに注意。
 
 ```bash
-echo 'export PYENV_ROOT="<PRJ_ROOT>/.venv/anyenv/envs/pyenv"' >> <FILE_PASS>
+echo 'export PYENV_ROOT="$(anyenv root)/envs/pyenv"' >> <FILE_PASS>
 echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> <FILE_PASS>
 echo 'eval "$(pyenv init -)"' >> <FILE_PASS>
 ```
 
-最後にシェルを再起動して、変更を適用させる。
+シェルを再起動して、変更を適用させる。また、pyenvを指定のバージョンにする。
 
 ```bash
-$ exec $SHELL
-$ python
-Python 3.11.1 (main, Feb  6 2023, 04:01:47) [GCC 7.5.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>>
+exec $SHELL
+pushd $(pyenv root)
+git checkout v2.3.12
+popd
 ```
 
 ## 特定のバージョンのpyenvに変更する
@@ -49,12 +48,10 @@ popd
 
 ```bash
 $ pyenv -v
-pyenv 2.3.12-6-gc8c324af
+pyenv 2.3.12
 ```
 
-### `versions`や`shims`が保存されているルートディレクトリのパスを表示
-
-`<HOME_PATH>/.anyenv/envs/pyenv`と表示されるか確認。`<HOME_PATH>/.pyenv`と表示された場合は`$PYENV_ROOT`の値が前述した通りに設定されていない。
+### pyenvのルートディレクトリのパスを表示
 
 ```bash
 $ pyenv root
@@ -76,7 +73,7 @@ pyenv rehash
 
 ### インストールしたPythonバージョンの一覧を表示
 
-それぞれのバージョンがインストールされているディレクトリのパスも表示される（`<HOME_PATH>/.anyenv/envs/pyenv/versions/<PYTHON_VERSION>`と表示されるはず。`<HOME_PATH>/.pyenv/versions/<PYTHON_VERSION>`と表示された場合は`$PYENV_ROOT`の値が前述した通りに設定されていない。）。
+それぞれのバージョンがインストールされているディレクトリのパスも表示される。
 
 ```bash
 pyenv versions
