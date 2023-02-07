@@ -15,7 +15,7 @@ anyenvを使ってインストールする。詳細は`anyenv/README.md`を参�
 `$PYENV_ROOT`には、`.anyenv`下にインストールしたpyenvのパスを指定していることに注意。
 
 ```bash
-echo 'export PYENV_ROOT="<HOME_PATH>/.anyenv/envs/pyenv"' >> <FILE_PASS>
+echo 'export PYENV_ROOT="<PRJ_ROOT>/.venv/anyenv/envs/pyenv"' >> <FILE_PASS>
 echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> <FILE_PASS>
 echo 'eval "$(pyenv init -)"' >> <FILE_PASS>
 ```
