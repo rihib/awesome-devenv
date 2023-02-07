@@ -2,7 +2,10 @@
 
 ## インストール
 
-anyenvを使ってインストールする。詳細は`anyenv/README.md`を参照。
+```bash
+anyenv install pyenv
+exec $SHELL -l
+```
 
 ## シェルを設定する
 
