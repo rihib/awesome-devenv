@@ -5,67 +5,66 @@
 下記のコマンドを実行してインストールする。`POETRY_VERSION`でインストールするバージョンを指定する。ここで指定している`POETRY_HOME`と`POETRY_VERSION`は`export`できない環境変数なので注意。
 
 ```bash
-python3 -m pip install poetry==    # 現環境でインストールできるバージョン一覧を表示。Pythonのバージョンによってインストールできるバージョンが変わってくる
+python -m pip install poetry==    # 現環境でインストールできるバージョン一覧を表示。Pythonのバージョンによってインストールできるバージョンが変わってくる
 curl -sSL https://install.python-poetry.org | POETRY_HOME=$HOME/.poetry POETRY_VERSION=1.3.2 python3 -
 ```
 
 パスを通すために、`~/.bashrc`と、`~/.profile`、`~/.bash_profile`、`~/.bash_login`の３つのうちで存在するファイル全てに対して環境変数を記述する（[参照](https://qiita.com/rihib/items/79f19029b4160eb81226#bash-1)）。以下は`~/.bash_login`が存在しない場合の例。
 
 ```bash
-echo 'export PATH=<HOME_PATH>/.poetry/bin:$PATH' >> ~/.bashrc
-echo 'export PATH=<HOME_PATH>/.poetry/bin:$PATH' >> ~/.bash_profile
-echo 'export PATH=<HOME_PATH>/.poetry/bin:$PATH' >> ~/.profile
+echo 'export PATH=$HOME/.poetry/bin:$PATH' >> ~/.bashrc
+echo 'export PATH=$HOME/.poetry/bin:$PATH' >> ~/.bash_profile
+echo 'export PATH=$HOME/.poetry/bin:$PATH' >> ~/.profile
+exec $SHELL
 ```
 
 ## 既存のプロジェクトが存在しない場合
 
 ### 初期化
 
-`Author`には、`name <email>`という形式で入力する。`License`には[SPDX License List](https://spdx.org/licenses/)の`Identifier`を値として使用する。もしライセンスがない場合は、`Proprietary`を値として使用する。
+以下のコマンドを実行してプロジェクトディレクトリを初期化する。
 &nbsp;
-プロジェクトのルートディレクトリの下に`pyproject.toml`と`poetry.lock`を生成する。どちらもリポジトリにコミットする必要がある。`poetry.lock`にはパッケージの依存関係とバージョンが正確に記述される。基本的に、`poetry.lock`の内容を手動で変更することはない。
-&nbsp;
-`poetry.lock`がない状態で`poetry install`を実行すると、`pyproject.toml`で指定した条件の中で一番最新のバージョンが`poetry.lock`に書き込まれて、仮想環境にインストールされる。`poetry.lock`がある状態で`poetry install`を実行されると、`poetry.lock`に記述されているバージョンが正確に仮想環境にインストールされる。そのため、バージョンの一貫性は保たれるので、最初にパッケージをインストールする際や、`pyproject.toml`にバージョンを記述する際は、必要がなければバージョンを指定する必要はない。
+ちなみに`poetry init`を実行した際に聞かれる質問には以下のように答える。`License`には[SPDX License List](https://spdx.org/licenses/)の`Identifier`を値として使用する。もしライセンスがない場合は、`Proprietary`を値として使用する。
 
 ```bash
-$ mkdir <PRJ_ROOT>
-$ cd <PRJ_ROOT>
-$ poetry virtualenvs.in-project true --local
-$ mkdir .venv
-$ poetry virtualenvs.prefer-active-python true --local
-$ pyenv local <PYTHON_VERSION>
-$ poetry init
-
-This command will guide you through creating your pyproject.toml config.
-
-Package name [<PRJ_ROOT>]:  <PACKAGE_NAME>
-Version [0.1.0]:  <VERSION>
-Description []:  <DESCRIPTION>
-Author [John Smith <johnsmith@example.org>, n to skip]:  John Smith <johnsmith@example.org>
-License []:  <LICENSE>
-Compatible Python versions [^3.11]:  <PYTHON_VERSION>
-$ ls -a
-.  ..  pyproject.toml
-$ poetry install
-$ ls -a
-.  ..  poetry.lock  pyproject.toml
+Package name [PROJECT_NAME]:  PROJECT_NAME
+Version [0.1.0]:  PROJECT_VERSION
+Description []:  DESCRIPTION
+Author [NAME <EMAIL>, n to skip]:  NAME <EMAIL>                     
+License []:  LICENSE
+Compatible Python versions [^3.11]:  3.11.1
 ```
+
+```bash
+cd $<PRJ_NAME>_ROOT
+pyenv local 3.11.1
+python -m venv .venv
+poetry config virtualenvs.in-project true --local
+poetry config virtualenvs.prefer-active-python true --local
+poetry init    # pyproject.tomlが生成される
+poetry install    # poetry.lockが生成される
+```
+
+生成された`pyproject.toml`と`poetry.lock`は、どちらもリポジトリにコミットする必要がある。`poetry.lock`にはパッケージの依存関係とバージョンが正確に記述される。基本的に、`poetry.lock`の内容を手動で変更することはない。
 
 ### `pyproject.toml`に追記
 
 この`README.md`と同じ階層にある`pyproject.toml`の内容をコピーして、生成した`pyproject.toml`に追記する。追記した後は、以下のコマンドを実行して、変更を`poetry.lock`に反映させる必要がある。
 
 ```bash
-poetry update
+poetry lock --no-update
 ```
 
 ## 既存のプロジェクトが存在する場合
 
-`pyproject.toml`、`poetry.lock`と同じ階層に移動し、`poetry install`を実行することで、正確なパッケージの依存関係とバージョンを再現する。この際、`virtualenvs.prefer-active-python = true`に設定して、`pyenv local`で指定したPythonバージョンの仮想環境にパッケージがインストールされるようにする。
+`pyproject.toml`、`poetry.lock`と同じ階層に移動し、`poetry install`を実行することで、正確なパッケージの依存関係とバージョンを再現する。
 
 ```bash
-poetry virtualenvs.prefer-active-python true --local
-pyenv local <PYTHON_VERSION>
+cd $<PRJ_NAME>_ROOT
+pyenv local 3.11.1
+python -m venv .venv
+poetry config virtualenvs.in-project true --local
+poetry config virtualenvs.prefer-active-python true --local
 poetry install
 ```
 
@@ -153,7 +152,7 @@ poetry config virtualenvs.prompt "{project_name}"    # 仮想環境のプロン�
 &nbsp;
 `virtualenvs.in-project = false`の場合、Poetryは`.venv`ディレクトリを無視する。
 &nbsp;
-また、`local`オプションを指定すると、その設定はそのプロジェクトにのみ適用される（この設定は`poetry.toml`に保存される）。
+また、`local`オプションを指定すると、その設定はそのプロジェクトにのみ適用される（この設定が記述された`poetry.toml`がプロジェクトルートディレクトリ下に生成される）。
 
 ```bash
 poetry config virtualenvs.in-project true --local
@@ -166,6 +165,8 @@ poetry virtualenvs.prefer-active-python true --local
 ```
 
 ### パッケージをインストールする
+
+`poetry.lock`がない状態で`poetry install`を実行すると、`pyproject.toml`で指定した条件の中で一番最新のバージョンが`poetry.lock`に書き込まれて、仮想環境にインストールされる。`poetry.lock`がある状態で`poetry install`が実行されると、`poetry.lock`に記述されているバージョンが正確に仮想環境にインストールされる。そのため、バージョンの一貫性は保たれるので、最初にパッケージをインストールする際や、`pyproject.toml`にバージョンを記述する際は、必要がなければバージョンを細かく指定する必要はない。
 
 ```bash
 poetry install    # `main`グループのパッケージがインストールされる
@@ -246,7 +247,7 @@ poetry export --format requirements.txt --output requirements.txt
 ```bash
 poetry env info    # 現在アクティブな仮想環境の情報を表示する
 poetry env info --path    # 仮想環境へのパスを表示する
-poetry env list    # 現在のプロジェクトに関係する仮想環境の一覧を表示する
+poetry env list    # 現在のプロジェクトに関係する仮想環境があるディレクトリの一覧を表示する
 poetry env list --full-path    # 現在のプロジェクトに関係する仮想環境の一覧を絶対パスで表示する
 ```
 
