@@ -3,40 +3,26 @@
 ## anyenvのインストール
 
 ```bash
-$ git clone https://github.com/anyenv/anyenv <PRJ_ROOT>/.venv/anyenv
-$ echo 'export PATH="<PRJ_ROOT>/.venv/anyenv/bin:$PATH"' >> ~/.bashrc
-$ echo 'export PATH="<PRJ_ROOT>/.venv/anyenv/bin:$PATH"' >> ~/.bash_profile
-$ echo 'export PATH="<PRJ_ROOT>/.venv/anyenv/bin:$PATH"' >> ~/.profile
+$ git clone https://github.com/anyenv/anyenv $<PRJ_NAME>_ROOT/.venv/anyenv
+$ echo 'export PATH="$<PRJ_NAME>_ROOT/.venv/anyenv/bin:$PATH"' >> ~/.bashrc
+$ echo 'export PATH="$<PRJ_NAME>_ROOT/.venv/anyenv/bin:$PATH"' >> ~/.bash_profile
+$ echo 'export PATH="$<PRJ_NAME>_ROOT/.venv/anyenv/bin:$PATH"' >> ~/.profile
+$ source ~/.bashrc
+$ source ~/.bash_profile
+$ source ~/.profile
 $ exec $SHELL -l
-$ <PRJ_ROOT>/.venv/anyenv/bin/anyenv init
-# Load anyenv automatically by adding
-# the following to ~/.bash_profile:
-
-eval "$(anyenv init -)"
-$ eval "$(anyenv init -)"
-ANYENV_DEFINITION_ROOT(/home/ubuntu/.config/anyenv/anyenv-install) doesn't exist. You can initialize it by:
-> anyenv install --init
+$ $<PRJ_NAME>_ROOT/.venv/anyenv/bin/anyenv init
 $ anyenv install --init
-Manifest directory doesn't exist: /home/ubuntu/.config/anyenv/anyenv-install
-Do you want to checkout https://github.com/anyenv/anyenv-install.git? [y/N]: y
-Cloning https://github.com/anyenv/anyenv-install.git master to /home/ubuntu/.config/anyenv/anyenv-install...
-Cloning into '/home/ubuntu/.config/anyenv/anyenv-install'...
-remote: Enumerating objects: 71, done.
-remote: Counting objects: 100% (14/14), done.
-remote: Compressing objects: 100% (13/13), done.
-remote: Total 71 (delta 4), reused 4 (delta 1), pack-reused 57
-Unpacking objects: 100% (71/71), done.
-
-Completed!
+$ eval "$(anyenv init -)"
 $ exec $SHELL -l
 $ anyenv -v
-anyenv 1.1.5-1-g5c58783
+anyenv 1.1.5
 ```
 
 ## 特定のバージョンのanyenvに変更する
 
 ```bash
-pushd $(anyenv root)
+pushd $<PRJ_NAME>_ROOT/.venv/anyenv
 git fetch
 git tag    # 利用できるタグの一覧を表示
 git checkout v1.1.5
@@ -48,14 +34,14 @@ popd
 anyenvにて管理しているすべての**envとプラグインを一括でアップデートできる`anyenv update`コマンドを提供するanyenvのプラグイン。
 
 ```bash
-mkdir -p $(anyenv root)/plugins
-git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
+mkdir -p $<PRJ_NAME>_ROOT/.venv/anyenv/plugins
+git clone https://github.com/znz/anyenv-update.git $<PRJ_NAME>_ROOT/.venv/anyenv/plugins/anyenv-update
 ```
 
 ## 特定のバージョンのanyenv-updateに変更する
 
 ```bash
-pushd $(anyenv root)/plugins/anyenv-update
+pushd $<PRJ_NAME>_ROOT/.venv/anyenv/plugins/anyenv-update
 git fetch
 git tag    # 利用できるタグの一覧を表示
 git checkout v1.2.0
@@ -92,10 +78,11 @@ $ anyenv install -l    # インストール可能な**envの一覧を表示
 
 ### **envのインストール
 
+詳しいインストール方法については、それぞれのディレクトリの`README.md`を参照。
+
 ```bash
-anyenv install pyenv
+anyenv install **env
 exec $SHELL -l
-pyenv -v
 ```
 
 ### 使用している**envの一覧を表示
