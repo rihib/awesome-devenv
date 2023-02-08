@@ -30,7 +30,7 @@ exec $SHELL
 Package name [PROJECT_NAME]:  PROJECT_NAME
 Version [0.1.0]:  PROJECT_VERSION
 Description []:  DESCRIPTION
-Author [NAME <EMAIL>, n to skip]:  NAME <EMAIL>                     
+Author [NAME <EMAIL>, n to skip]:  NAME <EMAIL>
 License []:  LICENSE
 Compatible Python versions [^3.11]:  3.11.1
 ```
