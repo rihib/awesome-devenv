@@ -61,7 +61,8 @@
 	// Personal
     "powermode.enabled": true
     "powermode.presets": "fireworks",
-	"powermode.combo.counterEnabled": "show"
+	"powermode.combo.counterEnabled": "show",
+	"powermode.shake.enabled": false,
 	// Project
 	// General
     "remote.SSH.defaultExtensions": [
@@ -74,7 +75,7 @@
     ],
 	"cSpell.ignoreWords": [
 		// アルファベット順
-		"powermode"
+		"powermode",
 	],
 }
 ```
