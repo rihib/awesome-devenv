@@ -39,10 +39,10 @@
 
 ```json
 {
-	// Personal
+    // Personal
     "vscode-pets.theme": "beach",
     "vscode-pets.throwBallWithMouse": true,
-	"vscode-pets.petSize": "medium",
+    "vscode-pets.petSize": "medium",
 }
 ```
 
@@ -58,9 +58,9 @@
     "powermode.combo.timeout": 1,
     // Project
     // General
-	"cSpell.ignoreWords": [
-		// アルファベット順
-		"powermode",
-	],
+    "cSpell.ignoreWords": [
+        // アルファベット順
+        "powermode",
+    ],
 }
 ```
