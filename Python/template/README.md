@@ -137,13 +137,15 @@ poetry add --group dev bandit black flake8 isort mypy
 
 ### 1.1.10 VSCodeの設定
 
-以下のコマンドを実行してプロジェクトルートディレクトリ直下に`.vscode/settings.json`を作成し、このドキュメントと同じディレクトリにある`.vscode/settings.json`の内容をコピペしてください。
+以下のコマンドを実行してプロジェクトルートディレクトリ直下に`.vscode/settings.json`を作成してください。
 
 ```bash
 mkdir $<PRJ_NAME>_ROOT/.vscode
 touch $<PRJ_NAME>_ROOT/.vscode/settings.json
 ```
 
+次に、このドキュメントと同じディレクトリにある`.vscode/settings.json`の内容を、作成した`.vscode/settings.json`にコピペしてください。
+<br/>
 VSCodeにて、拡張機能のパネルを開き、検索欄に`@recommended`と入力し、検索してください。`.vscode/settings.json`に記述してある拡張機能がワークスペースのおすすめとして表示されますので、すべてインストールしてください。
 
 ### 1.1.11 必要なディレクトリとファイルを作成する
