@@ -53,6 +53,7 @@
     "powermode.presets": "fireworks",
     "powermode.combo.counterEnabled": "show",
     "powermode.shake.enabled": false,
+    "powermode.combo.timeout": 1,
     // Project
     // General
 	"cSpell.ignoreWords": [
