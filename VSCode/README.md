@@ -53,6 +53,8 @@
     "powermode.presets": "fireworks",
     "powermode.combo.counterEnabled": "show",
     "powermode.shake.enabled": false,
+    // Project
+    // General
 	"cSpell.ignoreWords": [
 		// アルファベット順
 		"powermode",
