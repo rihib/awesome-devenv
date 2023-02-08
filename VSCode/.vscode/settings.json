@@ -5,6 +5,7 @@
         // General
         "christian-kohler.path-intellisense",
         "emilast.logfilehighligh",
+        "ibm.output-colorizer",
         "ms-ceintl.vscode-language-pack-ja",
         "ms-vscode-remote.vscode-remote-extensionpack",
         "ms-vsliveshare.vsliveshare",
@@ -20,6 +21,7 @@
         // General
         "christian-kohler.path-intellisense",
         "emilast.logfilehighligh",
+        "ibm.output-colorizer",
         "ms-ceintl.vscode-language-pack-ja",
         "ms-vscode-remote.vscode-remote-extensionpack",
         "ms-vsliveshare.vsliveshare",
