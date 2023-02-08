@@ -30,6 +30,8 @@
         "yzhang.markdown-all-in-one",
         // Prettier
         "esbenp.prettier-vscode",
+        // Python
+        "tamasfe.even-better-toml",
     ],
     "dev.containers.defaultExtensions": [
         // General
@@ -60,6 +62,8 @@
         "yzhang.markdown-all-in-one",
         // Prettier
         "esbenp.prettier-vscode",
+        // Python
+        "tamasfe.even-better-toml",
     ],
     "liveServer.settings.donotVerifyTags": true,
     "files.autoGuessEncoding": true,
