@@ -69,7 +69,7 @@ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.profile
 ~/.anyenv/bin/anyenv init
 echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
 exec $SHELL
-anyenv install --init
+echo y | anyenv install --init
 pushd $(anyenv root)
 git checkout v1.1.5
 popd
