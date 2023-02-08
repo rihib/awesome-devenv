@@ -1,6 +1,10 @@
 {
     // Project
     // General
+    "recommendations": [
+        // YAML
+        "redhat.vscode-yaml",
+    ],
     "remote.SSH.defaultExtensions": [
         // YAML
         "redhat.vscode-yaml",

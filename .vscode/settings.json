@@ -1,6 +1,38 @@
 {
     // Project
     // General
+    "recommendations": [
+        // General
+        "christian-kohler.path-intellisense",
+        "emilast.logfilehighligh",
+        "ibm.output-colorizer",
+        "ms-ceintl.vscode-language-pack-ja",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "ms-vsliveshare.vsliveshare",
+        "oderwat.indent-rainbow",
+        "pkief.material-icon-theme",
+        "ritwickdey.liveserver",
+        "shardulm94.trailing-spaces",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens",
+        "gruntfuggly.todo-tree",
+        "mosapride.zenkaku",
+        // Git
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        // GitHub
+        "github.vscode-pull-request-github",
+        // HTML, XML
+        "formulahendry.auto-complete-tag",
+        // Markdown
+        "davidanson.vscode-markdownlint",
+        "shd101wyy.markdown-preview-enhanced",
+        "yzhang.markdown-all-in-one",
+        // Prettier
+        "esbenp.prettier-vscode",
+        // Python
+        "tamasfe.even-better-toml",
+    ],
     "remote.SSH.defaultExtensions": [
         // General
         "christian-kohler.path-intellisense",

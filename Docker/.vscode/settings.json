@@ -1,6 +1,10 @@
 {
     // Project
     // General
+    "recommendations": [
+        // Docker
+        "ms-azuretools.vscode-docker",
+    ],
     "remote.SSH.defaultExtensions": [
         // Docker
         "ms-azuretools.vscode-docker",

@@ -1,6 +1,11 @@
 {
     // Project
     // General
+    "recommendations": [
+        // Git
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+    ],
     "remote.SSH.defaultExtensions": [
         // Git
         "eamodio.gitlens",

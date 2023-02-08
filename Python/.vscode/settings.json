@@ -1,6 +1,12 @@
 {
     // Project
     // General
+    "recommendations": [
+	// Python
+        "ms-python.python",
+        "njpwerner.autodocstring",
+        "tamasfe.even-better-toml",
+    ],
     "remote.SSH.defaultExtensions": [
         // Python
         "ms-python.python",
@@ -22,6 +28,7 @@
         "localfolder",
         "mypy",
         "njpwerner",
+        "pyproject",
         "stdlib",
         "thirdparty",
     ],
