@@ -32,3 +32,49 @@
 ## 拡張機能
 
 拡張機能については、[awesome-vscode](https://github.com/viatsko/awesome-vscode)が参考になる。
+
+### おもしろ拡張機能
+
+#### [vscode-pets](https://marketplace.visualstudio.com/items?itemName=tonybaloney.vscode-pets)
+
+```json
+{
+	// Personal
+    "vscode-pets.theme": "beach",
+    // Project
+    // General
+    "remote.SSH.defaultExtensions": [
+        // Personal
+        "tonybaloney.vscode-pets",
+    ],
+    "dev.containers.defaultExtensions": [
+        // Personal
+        "tonybaloney.vscode-pets",
+    ],
+}
+```
+
+#### [Power Mode](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-power-mode)
+
+```json
+{
+	// Personal
+    "powermode.enabled": true
+    "powermode.presets": "fireworks",
+	"powermode.combo.counterEnabled": "show"
+	// Project
+	// General
+    "remote.SSH.defaultExtensions": [
+        // Personal
+        "hoovercj.vscode-power-mode",
+    ],
+    "dev.containers.defaultExtensions": [
+        // Personal
+        "hoovercj.vscode-power-mode",
+    ],
+	"cSpell.ignoreWords": [
+		// アルファベット順
+		"powermode"
+	],
+}
+```
