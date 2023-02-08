@@ -1,6 +1,12 @@
 {
     // Project
     // General
+    "recommendations": [
+        // Markdown
+        "davidanson.vscode-markdownlint",
+        "shd101wyy.markdown-preview-enhanced",
+        "yzhang.markdown-all-in-one",
+    ],
     "remote.SSH.defaultExtensions": [
         // Markdown
         "davidanson.vscode-markdownlint",
