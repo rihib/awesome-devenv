@@ -37,6 +37,9 @@
     ],
     "liveServer.settings.donotVerifyTags": true,
     "files.autoGuessEncoding": true,
+    "editor.codeActionsOnSave": {
+		"source.organizeImports": true,
+	},
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "files.insertFinalNewline": true,
