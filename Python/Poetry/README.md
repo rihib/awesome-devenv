@@ -23,7 +23,7 @@ exec $SHELL
 ### 初期化
 
 以下のコマンドを実行してプロジェクトディレクトリを初期化する。
-<br/>
+
 ちなみに`poetry init`を実行した際に聞かれる質問には以下のように答える。`License`には[SPDX License List](https://spdx.org/licenses/)の`Identifier`を値として使用する。もしライセンスがない場合は、`Proprietary`を値として使用する。
 
 ```bash
@@ -73,7 +73,7 @@ poetry install
 ### グループの作成
 
 グループを定義し、それぞれのグループごとに必要なパッケージをインストールすることができる。例えば、開発用途にしか使わないパッケージを本番環境ではインストールしないようにするといったことが可能になる。
-<br/>
+
 グループは`tool.poetry.group.<GROUP_NAME>`というセクション名で`pyproject.toml`に宣言できる。インストールするパッケージは`tool.poetry.group.<GROUP_NAME>.dependencies`というセクションに記述される。
 
 ```text
@@ -147,11 +147,11 @@ poetry config virtualenvs.prompt "{project_name}"    # 仮想環境のプロン�
 ```
 
 `virtualenvs.in-project = null`の場合、デフォルトでPoetryは`{cache-dir}/virtualenvs`の下に仮想環境を作成するか、`{project-dir}/.venv`ディレクトリが利用可能である場合にそれを使用する。
-<br/>
+
 `virtualenvs.in-project = true`の場合、仮想環境はプロジェクトのルートディレクトリ内の`.venv`というディレクトリに作成される（Poetryはプロジェクトのルートディレクトリ内に`.venv`が存在することを前提に動作するので、先に`.venv`ディレクトリを作っておく必要がある）。
-<br/>
+
 `virtualenvs.in-project = false`の場合、Poetryは`.venv`ディレクトリを無視する。
-<br/>
+
 また、`local`オプションを指定すると、その設定はそのプロジェクトにのみ適用される（この設定が記述された`poetry.toml`がプロジェクトルートディレクトリ下に生成される）。
 
 ```bash
@@ -227,7 +227,7 @@ poetry lock --no-update
 ### `poetry.lock`のパッケージのバージョンを更新する
 
 再度、`pyproject.toml`で指定した条件の中で一番最新のバージョンが`poetry.lock`に書き込まれる。これは`poetry.lock`を削除して`poetry install`を実行するのと同じことである。
-<br/>
+
 `pyproject.toml`を手動で変更した際に、その変更を`poetry.lock`に適用するのにも使えるが、その際は他のパッケージのバージョンも意図せず上がってしまう可能性があるので、なるべく手動で変更するのを避け、コマンドを使用して変更を加える必要がある。
 
 ```bash
