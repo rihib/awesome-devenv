@@ -1,5 +1,15 @@
 # Python
 
+## リンター・フォーマッターの有効化
+
+以下のコマンドを実行し、必要なリンター・フォーマッターをインストールする。
+
+```bash
+cd $<PRJ_NAME>_ROOT
+pyenv local 3.11.1
+poetry add --group dev bandit black flake8 isort mypy
+```
+
 ## VSCode拡張機能
 
 ### autoDocstring
