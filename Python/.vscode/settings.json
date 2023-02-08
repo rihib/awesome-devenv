@@ -5,19 +5,25 @@
         // Python
         "ms-python.python",
         "njpwerner.autodocstring",
+        "tamasfe.even-better-toml",
     ],
     "dev.containers.defaultExtensions": [
         // Python
         "ms-python.python",
         "njpwerner.autodocstring",
+        "tamasfe.even-better-toml",
     ],
     "cSpell.ignoreWords": [
         // アルファベット順
         "autodocstring",
         "davidanson",
+        "firstparty",
         "isort",
+        "localfolder",
         "mypy",
         "njpwerner",
+        "stdlib",
+        "thirdparty",
     ],
     // Python
     "python.analysis.autoImportCompletions": true,
