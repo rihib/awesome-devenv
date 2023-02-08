@@ -22,7 +22,7 @@
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.iconTheme": "material-icon-theme",
-    "editor.autoIndent": "brackets",
+    "editor.autoIndent": "advanced",
     "editor.fontSize": 14,
     "material-icon-theme.activeIconPack": "react",
     "window.zoomLevel": 1,
