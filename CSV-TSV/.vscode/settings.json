@@ -1,6 +1,10 @@
 {
     // Project
     // General
+    "recommendations": [
+        // CSV, TSV
+        "mechatroner.rainbow-csv",
+    ],
     "remote.SSH.defaultExtensions": [
         // CSV, TSV
         "mechatroner.rainbow-csv",
