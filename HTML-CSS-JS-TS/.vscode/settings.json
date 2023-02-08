@@ -1,6 +1,12 @@
 {
     // Project
     // General
+    "recommendations": [
+        // HTML, XML
+        "formulahendry.auto-complete-tag",
+        // Prettier
+        "esbenp.prettier-vscode",
+    ],
     "remote.SSH.defaultExtensions": [
         // HTML, XML
         "formulahendry.auto-complete-tag",
