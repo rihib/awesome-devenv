@@ -41,16 +41,6 @@
 {
 	// Personal
     "vscode-pets.theme": "beach",
-    // Project
-    // General
-    "remote.SSH.defaultExtensions": [
-        // Personal
-        "tonybaloney.vscode-pets",
-    ],
-    "dev.containers.defaultExtensions": [
-        // Personal
-        "tonybaloney.vscode-pets",
-    ],
 }
 ```
 
@@ -58,21 +48,11 @@
 
 ```json
 {
-	// Personal
+    // Personal
     "powermode.enabled": true
     "powermode.presets": "fireworks",
-	"powermode.combo.counterEnabled": "show",
-	"powermode.shake.enabled": false,
-	// Project
-	// General
-    "remote.SSH.defaultExtensions": [
-        // Personal
-        "hoovercj.vscode-power-mode",
-    ],
-    "dev.containers.defaultExtensions": [
-        // Personal
-        "hoovercj.vscode-power-mode",
-    ],
+    "powermode.combo.counterEnabled": "show",
+    "powermode.shake.enabled": false,
 	"cSpell.ignoreWords": [
 		// アルファベット順
 		"powermode",
