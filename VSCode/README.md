@@ -41,6 +41,8 @@
 {
 	// Personal
     "vscode-pets.theme": "beach",
+    "vscode-pets.throwBallWithMouse": true,
+	"vscode-pets.petSize": "medium",
 }
 ```
 
