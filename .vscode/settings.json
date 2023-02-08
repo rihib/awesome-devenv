@@ -4,57 +4,68 @@
     "remote.SSH.defaultExtensions": [
         // General
         "christian-kohler.path-intellisense",
-        "davidanson.vscode-markdownlint",
-        "mhutchie.git-graph",
+        "emilast.logfilehighligh",
+        "ibm.output-colorizer",
         "ms-ceintl.vscode-language-pack-ja",
         "ms-vscode-remote.vscode-remote-extensionpack",
         "ms-vsliveshare.vsliveshare",
         "oderwat.indent-rainbow",
         "pkief.material-icon-theme",
-        "redhat.vscode-yaml",
         "ritwickdey.liveserver",
         "shardulm94.trailing-spaces",
-        "shd101wyy.markdown-preview-enhanced",
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens",
-        "wayou.vscode-todo-highlight",
-        "yzhang.markdown-all-in-one",
+        "gruntfuggly.todo-tree",
+        "mosapride.zenkaku",
         // Git
         "eamodio.gitlens",
         "mhutchie.git-graph",
         // GitHub
         "github.vscode-pull-request-github",
+        // HTML, XML
+        "formulahendry.auto-complete-tag",
+        // Markdown
+        "davidanson.vscode-markdownlint",
+        "shd101wyy.markdown-preview-enhanced",
+        "yzhang.markdown-all-in-one",
         // Prettier
         "esbenp.prettier-vscode",
     ],
     "dev.containers.defaultExtensions": [
         // General
         "christian-kohler.path-intellisense",
-        "davidanson.vscode-markdownlint",
-        "mhutchie.git-graph",
+        "emilast.logfilehighligh",
+        "ibm.output-colorizer",
         "ms-ceintl.vscode-language-pack-ja",
         "ms-vscode-remote.vscode-remote-extensionpack",
         "ms-vsliveshare.vsliveshare",
         "oderwat.indent-rainbow",
         "pkief.material-icon-theme",
-        "redhat.vscode-yaml",
         "ritwickdey.liveserver",
         "shardulm94.trailing-spaces",
-        "shd101wyy.markdown-preview-enhanced",
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens",
-        "wayou.vscode-todo-highlight",
-        "yzhang.markdown-all-in-one",
+        "gruntfuggly.todo-tree",
+        "mosapride.zenkaku",
         // Git
         "eamodio.gitlens",
         "mhutchie.git-graph",
         // GitHub
         "github.vscode-pull-request-github",
+        // HTML, XML
+        "formulahendry.auto-complete-tag",
+        // Markdown
+        "davidanson.vscode-markdownlint",
+        "shd101wyy.markdown-preview-enhanced",
+        "yzhang.markdown-all-in-one",
         // Prettier
         "esbenp.prettier-vscode",
     ],
     "liveServer.settings.donotVerifyTags": true,
     "files.autoGuessEncoding": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+    },
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "files.insertFinalNewline": true,
@@ -106,6 +117,10 @@
         "wayou",
         "yzhang",
     ],
+    // Markdown
+    "markdownlint.config": {
+        "MD033": false,
+    },
     // Prettier
     "prettier.tabWidth": 4,
     "prettier.useTabs": true,
