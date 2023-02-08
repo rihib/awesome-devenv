@@ -99,6 +99,7 @@ git checkout v2.3.12
 popd
 pyenv install 3.11.1
 pyenv rehash
+pyenv global 3.11.1
 ```
 
 ### 1.1.8 Poetryのインストールと初期化
