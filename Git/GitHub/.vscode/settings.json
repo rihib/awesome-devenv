@@ -1,6 +1,10 @@
 {
     // Project
     // General
+    "recommendations": [
+        // GitHub
+        "github.vscode-pull-request-github",
+    ],
     "remote.SSH.defaultExtensions": [
         // GitHub
         "github.vscode-pull-request-github",
