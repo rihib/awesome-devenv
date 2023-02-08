@@ -117,7 +117,7 @@ pyenv local 3.11.1
 python -m venv .venv
 poetry config virtualenvs.in-project true --local
 poetry config virtualenvs.prefer-active-python true --local
-poetry init --no-interaction --name <YOUR_PRJ_NAME> --description <DESCRIPTION> --author "NAME <EMAIL>" --python 3.11.1
+poetry init --no-interaction --name "<YOUR_PRJ_NAME>" --description "<DESCRIPTION>" --author "NAME <EMAIL>" --python 3.11.1
 ```
 
 このドキュメントと同じディレクトリにある`pyproject.toml`の内容をコピーし、生成された`pyproject.toml`に追記してください。次に、以下のコマンドを実行し、変更を`poetry.lock`に反映させてください。
