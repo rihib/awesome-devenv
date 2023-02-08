@@ -28,3 +28,7 @@
     "window.zoomLevel": 1,
 }
 ```
+
+## 拡張機能
+
+拡張機能については、[awesome-vscode](https://github.com/viatsko/awesome-vscode)が参考になる。
