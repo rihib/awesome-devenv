@@ -22,6 +22,7 @@
         "localfolder",
         "mypy",
         "njpwerner",
+        "pyproject",
         "stdlib",
         "thirdparty",
     ],
