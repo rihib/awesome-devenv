@@ -16,6 +16,7 @@
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens",
         "wayou.vscode-todo-highlight",
+        "mosapride.zenkaku",
     ],
     "dev.containers.defaultExtensions": [
         // General
@@ -32,6 +33,7 @@
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens",
         "wayou.vscode-todo-highlight",
+        "mosapride.zenkaku",
     ],
     "liveServer.settings.donotVerifyTags": true,
     "files.autoGuessEncoding": true,
