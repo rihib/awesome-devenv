@@ -87,9 +87,9 @@ SETTINGS_JSON='
         "davidanson.vscode-markdownlint",\n
         "shd101wyy.markdown-preview-enhanced",\n
         "yzhang.markdown-all-in-one",\n
-	// Personal\n
-	"hoovercj.vscode-power-mode",\n
-	"tonybaloney.vscode-pets",\n
+        // Personal\n
+        "hoovercj.vscode-power-mode",\n
+        "tonybaloney.vscode-pets",\n
         // Prettier\n
         "esbenp.prettier-vscode",\n
         // Python\n
@@ -130,9 +130,9 @@ SETTINGS_JSON='
         "davidanson.vscode-markdownlint",\n
         "shd101wyy.markdown-preview-enhanced",\n
         "yzhang.markdown-all-in-one",\n
-	// Personal\n
-	"hoovercj.vscode-power-mode",\n
-	"tonybaloney.vscode-pets",\n
+        // Personal\n
+        "hoovercj.vscode-power-mode",\n
+        "tonybaloney.vscode-pets",\n
         // Prettier\n
         "esbenp.prettier-vscode",\n
         // Python\n
@@ -173,9 +173,9 @@ SETTINGS_JSON='
         "davidanson.vscode-markdownlint",\n
         "shd101wyy.markdown-preview-enhanced",\n
         "yzhang.markdown-all-in-one",\n
-	// Personal\n
-	"hoovercj.vscode-power-mode",\n
-	"tonybaloney.vscode-pets",\n
+        // Personal\n
+        "hoovercj.vscode-power-mode",\n
+        "tonybaloney.vscode-pets",\n
         // Prettier\n
         "esbenp.prettier-vscode",\n
         // Python\n
@@ -215,7 +215,7 @@ SETTINGS_JSON='
         "njpwerner",\n
         "oderwat",\n
         "pkief",\n
-	"powermode",\n
+	    "powermode",\n
         "pyproject",\n
         "ritwickdey",\n
         "shardulm",\n
