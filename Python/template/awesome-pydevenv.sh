@@ -34,6 +34,26 @@ warn_redundant_casts = true\n
 '
 SETTINGS_JSON='
 {\n
+    // Personal\n
+    "workbench.colorTheme": "Default Light+",\n
+    "workbench.startupEditor": "none",\n
+    "explorer.confirmDragAndDrop": false,\n
+    "explorer.confirmDelete": false,\n
+    "terminal.integrated.enableMultiLinePasteWarning": false,\n
+    "security.workspace.trust.untrustedFiles": "open",\n
+    "workbench.iconTheme": "material-icon-theme",\n
+    "editor.autoIndent": "advanced",\n
+    "editor.fontSize": 14,\n
+    "material-icon-theme.activeIconPack": "react",\n
+    "window.zoomLevel": 1,\n
+    "vscode-pets.theme": "beach",\n
+    "vscode-pets.throwBallWithMouse": true,\n
+    "vscode-pets.petSize": "medium",\n
+    "powermode.enabled": true\n
+    "powermode.presets": "fireworks",\n
+    "powermode.combo.counterEnabled": "show",\n
+    "powermode.shake.enabled": false,\n
+    "powermode.combo.timeout": 1,\n
     // Project\n
     // General\n
     "recommendations": [\n
@@ -67,6 +87,9 @@ SETTINGS_JSON='
         "davidanson.vscode-markdownlint",\n
         "shd101wyy.markdown-preview-enhanced",\n
         "yzhang.markdown-all-in-one",\n
+	// Personal\n
+	"hoovercj.vscode-power-mode",\n
+	"tonybaloney.vscode-pets",\n
         // Prettier\n
         "esbenp.prettier-vscode",\n
         // Python\n
@@ -107,6 +130,9 @@ SETTINGS_JSON='
         "davidanson.vscode-markdownlint",\n
         "shd101wyy.markdown-preview-enhanced",\n
         "yzhang.markdown-all-in-one",\n
+	// Personal\n
+	"hoovercj.vscode-power-mode",\n
+	"tonybaloney.vscode-pets",\n
         // Prettier\n
         "esbenp.prettier-vscode",\n
         // Python\n
@@ -147,6 +173,9 @@ SETTINGS_JSON='
         "davidanson.vscode-markdownlint",\n
         "shd101wyy.markdown-preview-enhanced",\n
         "yzhang.markdown-all-in-one",\n
+	// Personal\n
+	"hoovercj.vscode-power-mode",\n
+	"tonybaloney.vscode-pets",\n
         // Prettier\n
         "esbenp.prettier-vscode",\n
         // Python\n
@@ -186,6 +215,7 @@ SETTINGS_JSON='
         "njpwerner",\n
         "oderwat",\n
         "pkief",\n
+	"powermode",\n
         "pyproject",\n
         "ritwickdey",\n
         "shardulm",\n
