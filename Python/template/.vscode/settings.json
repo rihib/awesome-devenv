@@ -11,10 +11,10 @@
     "editor.fontSize": 14,
     "material-icon-theme.activeIconPack": "react",
     "window.zoomLevel": 1,
-	"vscode-pets.theme": "beach",
+    "vscode-pets.theme": "beach",
     "vscode-pets.throwBallWithMouse": true,
     "vscode-pets.petSize": "medium",
-	"powermode.enabled": true
+    "powermode.enabled": true,
     "powermode.presets": "fireworks",
     "powermode.combo.counterEnabled": "show",
     "powermode.shake.enabled": false,
@@ -52,9 +52,9 @@
         "davidanson.vscode-markdownlint",
         "shd101wyy.markdown-preview-enhanced",
         "yzhang.markdown-all-in-one",
-	    // Personal
-	    "hoovercj.vscode-power-mode",
-	    "tonybaloney.vscode-pets",
+        // Personal
+        "hoovercj.vscode-power-mode",
+        "tonybaloney.vscode-pets",
         // Prettier
         "esbenp.prettier-vscode",
         // Python
@@ -95,9 +95,9 @@
         "davidanson.vscode-markdownlint",
         "shd101wyy.markdown-preview-enhanced",
         "yzhang.markdown-all-in-one",
-		// Personal
-	    "hoovercj.vscode-power-mode",
-	    "tonybaloney.vscode-pets",
+        // Personal
+        "hoovercj.vscode-power-mode",
+        "tonybaloney.vscode-pets",
         // Prettier
         "esbenp.prettier-vscode",
         // Python
@@ -138,9 +138,9 @@
         "davidanson.vscode-markdownlint",
         "shd101wyy.markdown-preview-enhanced",
         "yzhang.markdown-all-in-one",
-		// Personal
-	    "hoovercj.vscode-power-mode",
-	    "tonybaloney.vscode-pets",
+        // Personal
+        "hoovercj.vscode-power-mode",
+        "tonybaloney.vscode-pets",
         // Prettier
         "esbenp.prettier-vscode",
         // Python
@@ -179,7 +179,7 @@
         "mhutchie",
         "njpwerner",
         "oderwat",
-		"powermode",
+        "powermode",
         "pkief",
         "pyproject",
         "ritwickdey",
@@ -201,14 +201,14 @@
     "python.analysis.autoImportUserSymbols": true,
     "python.analysis.completeFunctionParens": true,
     "python.analysis.extraPaths": [
-		"${workspaceFolder}/.venv/lib/python*/site-packages/",
-	],
+        "${workspaceFolder}/.venv/lib/python*/site-packages/",
+    ],
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.variableTypes": true,
     "python.analysis.typeCheckingMode": "strict",
     "python.autoComplete.extraPaths": [
-		"${workspaceFolder}/.venv/lib/python*/site-packages/",
-	],
+        "${workspaceFolder}/.venv/lib/python*/site-packages/",
+    ],
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "${workspaceFolder}/.venv/bin/black",
@@ -225,6 +225,6 @@
     "isort.check": true,
     "isort.showNotifications": "onWarning",
     "isort.path": [
-		"${workspaceFolder}/.venv/bin/isort"
-	],
+        "${workspaceFolder}/.venv/bin/isort"
+    ],
 }
