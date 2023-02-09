@@ -50,7 +50,7 @@ SETTINGS_JSON='
     "vscode-pets.theme": "beach",\n
     "vscode-pets.throwBallWithMouse": true,\n
     "vscode-pets.petSize": "medium",\n
-    "powermode.enabled": true\n
+    "powermode.enabled": true,\n
     "powermode.presets": "fireworks",\n
     "powermode.combo.counterEnabled": "show",\n
     "powermode.shake.enabled": false,\n
