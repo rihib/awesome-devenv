@@ -15,6 +15,7 @@ YOUR_PRJ_NAME="tmp"
 DESCRIPTION="description"
 AUTHOR="rihib <rihib@rihib.dev>"
 PYPROJECT_TOML='
+\n
 [tool.isort]\n
 profile = "black"\n
 import_heading_stdlib = "Stdlib"\n
@@ -194,7 +195,7 @@ SETTINGS_JSON='
     "editor.formatOnType": true,\n
     "files.insertFinalNewline": true,\n
     "cSpell.ignoreWords": [\n
-        // アルファベット順
+        // アルファベット順\n
         "autodocstring",\n
         "azuretools",\n
         "ceintl",\n
