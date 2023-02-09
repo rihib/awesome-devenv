@@ -257,7 +257,7 @@ echo -e "\n\n\nGit was configured successfully.\n\n\n"
 
 # プロジェクトルートディレクトリの作成
 mkdir -p ${PRJ_ROOT_PATH}
-git clone $YOUR_GITHUB_REPOSITORY_URL ${PRJ_ROOT_PATH}
+git clone ${YOUR_GITHUB_REPOSITORY_URL} ${PRJ_ROOT_PATH}
 echo -e "\n\n\nProject root directory was created successfully.\n\n\n"
 
 # anyenvのインストール
