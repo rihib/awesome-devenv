@@ -19,9 +19,9 @@ GitHubにてリポジトリを作成してください。その際、`README.md`
 ### 1.1.2 Cloud9環境の新規作成
 
 1. Cloud9環境を作成
-   - Cloud9がEC2インスタンスにSSH接続する設定項目を選択
    - インスタンスタイプは`t3.large`を選択
-   - OSは`Ubuntu18.04LTS`を選択
+   - OSは`Ubuntu Server 18.04 LTS`を選択
+   - `Network settings`の`Connection`は`Secure Shell(SSH)`を選択
 1. EC2インスタンスのセキュリティグループの設定を編集
 1. `cloud9`という名前のキーペアを作成し、ローカルの`~/.ssh`下に配置
 1. 作成したCloud9を開き、画面左側のディレクトリ一覧の右上にある歯車マーク（設定ボタン）を押し「Show Hidden Files」と「Show Home in Favorites」にチェックを入れ、`~/.ssh/authorized_keys`を開き、ローカルの`~/.ssh/cloud9.pub`に書いてある公開鍵をコピペ
