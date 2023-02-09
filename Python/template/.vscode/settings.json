@@ -1,4 +1,24 @@
 {
+    // Personal
+    "workbench.colorTheme": "Default Light+",
+    "workbench.startupEditor": "none",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.autoIndent": "advanced",
+    "editor.fontSize": 14,
+    "material-icon-theme.activeIconPack": "react",
+    "window.zoomLevel": 1,
+	"vscode-pets.theme": "beach",
+    "vscode-pets.throwBallWithMouse": true,
+    "vscode-pets.petSize": "medium",
+	"powermode.enabled": true
+    "powermode.presets": "fireworks",
+    "powermode.combo.counterEnabled": "show",
+    "powermode.shake.enabled": false,
+    "powermode.combo.timeout": 1,
     // Project
     // General
     "recommendations": [
@@ -32,6 +52,9 @@
         "davidanson.vscode-markdownlint",
         "shd101wyy.markdown-preview-enhanced",
         "yzhang.markdown-all-in-one",
+	    // Personal
+	    "hoovercj.vscode-power-mode",
+	    "tonybaloney.vscode-pets",
         // Prettier
         "esbenp.prettier-vscode",
         // Python
@@ -72,6 +95,9 @@
         "davidanson.vscode-markdownlint",
         "shd101wyy.markdown-preview-enhanced",
         "yzhang.markdown-all-in-one",
+		// Personal
+	    "hoovercj.vscode-power-mode",
+	    "tonybaloney.vscode-pets",
         // Prettier
         "esbenp.prettier-vscode",
         // Python
@@ -112,6 +138,9 @@
         "davidanson.vscode-markdownlint",
         "shd101wyy.markdown-preview-enhanced",
         "yzhang.markdown-all-in-one",
+		// Personal
+	    "hoovercj.vscode-power-mode",
+	    "tonybaloney.vscode-pets",
         // Prettier
         "esbenp.prettier-vscode",
         // Python
@@ -150,6 +179,7 @@
         "mhutchie",
         "njpwerner",
         "oderwat",
+		"powermode",
         "pkief",
         "pyproject",
         "ritwickdey",
