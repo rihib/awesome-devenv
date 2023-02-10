@@ -106,7 +106,7 @@
     "editor.formatOnType": true,
     "files.insertFinalNewline": true,
     "cSpell.ignoreWords": [
-        // アルファベット順
+        // アルファベット順・小文字のみ・小文字のみ
         "anyenv",
         "ceintl",
         "crenv",

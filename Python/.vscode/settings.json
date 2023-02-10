@@ -20,7 +20,7 @@
         "tamasfe.even-better-toml",
     ],
     "cSpell.ignoreWords": [
-        // アルファベット順
+        // アルファベット順・小文字のみ
         "autodocstring",
         "davidanson",
         "firstparty",

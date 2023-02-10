@@ -159,7 +159,7 @@
     "editor.formatOnType": true,
     "files.insertFinalNewline": true,
     "cSpell.ignoreWords": [
-        // アルファベット順
+        // アルファベット順・小文字のみ
         "autodocstring",
         "azuretools",
         "ceintl",

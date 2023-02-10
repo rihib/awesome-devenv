@@ -59,7 +59,7 @@
     // Project
     // General
     "cSpell.ignoreWords": [
-        // アルファベット順
+        // アルファベット順・小文字のみ
         "powermode",
     ],
 }

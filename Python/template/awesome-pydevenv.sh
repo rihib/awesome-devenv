@@ -195,7 +195,7 @@ SETTINGS_JSON='
     "editor.formatOnType": true,\n
     "files.insertFinalNewline": true,\n
     "cSpell.ignoreWords": [\n
-        // アルファベット順\n
+        // アルファベット順・小文字のみ\n
         "autodocstring",\n
         "azuretools",\n
         "ceintl",\n

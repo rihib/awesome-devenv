@@ -20,7 +20,7 @@
         "yzhang.markdown-all-in-one",
     ],
     "cSpell.ignoreWords": [
-        // アルファベット順
+        // アルファベット順・小文字のみ
         "yzhang",
     ],
     // Markdown
