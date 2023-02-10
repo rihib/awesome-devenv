@@ -137,12 +137,12 @@ poetry init --no-interaction --name "<YOUR_PRJ_NAME>" --description "<DESCRIPTIO
 poetry install
 ```
 
-### 1.1.9 リンター・フォーマッターをインストールする
+### 1.1.9 開発ツールをインストールする
 
-以下のコマンドを実行し、リンター・フォーマッターをインストールしてください。
+以下のコマンドを実行し、開発ツールをインストールしてください。
 
 ```bash
-poetry add --group dev bandit black flake8 isort mypy
+poetry add --group dev bandit black flake8 isort mypy pytest
 ```
 
 ### 1.1.10 VSCodeの設定
@@ -200,5 +200,11 @@ poetry shell
 #### 2.3.1 `pre-commit`テスト
 
 #### 2.3.2 ユニットテスト
+
+ユニットテストは、ユニットのインターフェイス（引数と戻り値）のみに着目します[^1]。ある関数についてユニットテストするには、考えられるあらゆる種類の入力をし、それぞれ適切な出力が返ってくるかをチェックします。
+
+ユニットテストは、コミット前、マージ前、ビルド後などに頻繁に実行することが望ましいです。そのためには高速に実行できるようにする必要があるため、ユニットテストそれ自体とテスト対象のコードのみで独立して実行できるように、モック等を利用して外部依存しないように書く必要があります。
+
+ここに書いてある概要は[Python testing in Visual Studio Code](https://code.visualstudio.com/docs/python/testing#_a-little-background-on-unit-testing)を参照しています。より詳細な概要を知りたい場合は[Unit testing - Wikipedia](https://en.wikipedia.org/wiki/Unit_testing)、具体的な実行方法を知りたい場合は[gwtw/py-sorting - GitHub](https://github.com/gwtw/py-sorting)を参照してください。
 
 ### 2.4 ロギング

@@ -258,10 +258,15 @@ SETTINGS_JSON='
     "python.linting.mypyPath": "${workspaceFolder}/.venv/bin/mypy",\n
     "python.linting.banditEnabled": true,\n
     "python.linting.banditPath": "${workspaceFolder}/.venv/bin/bandit",\n
+    "python.testing.pytestArgs": [\n
+        "tests",\n
+    ],\n
+    "python.testing.unittestEnabled": false,\n
+    "python.testing.pytestEnabled": true,\n
     "isort.check": true,\n
     "isort.showNotifications": "onWarning",\n
     "isort.path": [\n
-		"${workspaceFolder}/.venv/bin/isort"
+		"${workspaceFolder}/.venv/bin/isort",\n
 	],\n
 }\n
 '

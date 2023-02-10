@@ -58,9 +58,14 @@
     "python.linting.mypyPath": "${workspaceFolder}/.venv/bin/mypy",
     "python.linting.banditEnabled": true,
     "python.linting.banditPath": "${workspaceFolder}/.venv/bin/bandit",
+    "python.testing.pytestArgs": [
+        "tests",
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
     "isort.check": true,
     "isort.showNotifications": "onWarning",
     "isort.path": [
-		"${workspaceFolder}/.venv/bin/isort"
+		"${workspaceFolder}/.venv/bin/isort",
 	],
 }
