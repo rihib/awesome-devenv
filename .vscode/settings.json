@@ -112,6 +112,7 @@
         "crenv",
         "denv",
         "devenv",
+        "doctest",
         "donot",
         "eamodio",
         "erlenv",
