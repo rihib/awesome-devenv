@@ -139,6 +139,7 @@
         "popd",
         "powermode",
         "pushd",
+        "pydevenv",
         "pyenv",
         "pyproject",
         "pytest",

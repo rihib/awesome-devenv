@@ -375,6 +375,9 @@ git commit -m "プロジェクトを作成"
 git push
 echo -e "\n\n\nSuccessfully pushed to GitHub.\n\n\n"
 
+# 仮想環境を立ち上げる
+poetry shell
+
 # マーカーを挿入
 echo -e "\n# end awesome-pydevenv\n" >> ~/.bashrc
 echo -e "\n# end awesome-pydevenv\n" >> ~/.bash_profile
