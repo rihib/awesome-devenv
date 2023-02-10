@@ -30,7 +30,25 @@ GitHubにてリポジトリを作成してください。その際、`README.md`
 
 ### 1.1.x シェルスクリプトを実行する
 
-このドキュメントと同じディレクトリにある`awesome-pydevenv.sh`をサーバーの任意の場所に置き、変数の値を適切なものに変更してください。変更したら、以下のコマンドで実行すると自動で環境構築が行われます。完了したら、一旦SSH接続を切り、再度接続し直してください。再接続時に拡張機能がインストールされます。
+このドキュメントと同じディレクトリにある`awesome-pydevenv.sh`をサーバーの任意の場所に置き、変数の値を適切なものに変更してください。変更したら、以下のコマンドで実行すると自動で環境構築が行われます。
+
+完了したら、下記のように`pyproject.toml`に`packages`を追加し、次に以下のコマンドを手動で実行してください。
+
+```text
+[tool.poetry]
+name = "PROJECT_NAME"
+version = "PROJECT_VERSION"
+description = "DESCRIPTION"
+authors = ["NAME <EMAIL>"]
+readme = "README.md"
+packages = [{ include = "src" }, { include = "tests" }]    # これを記述する
+```
+
+```bash
+poetry install
+```
+
+最後に、一旦SSH接続を切り、再度接続し直してください。再接続時に拡張機能がインストールされます。
 
 手動で環境構築したい場合はこの項をスキップして、次の項からはじめてください。
 
@@ -131,7 +149,19 @@ poetry config virtualenvs.prefer-active-python true --local
 poetry init --no-interaction --name "<YOUR_PRJ_NAME>" --description "<DESCRIPTION>" --author "NAME <EMAIL>" --python 3.11.1
 ```
 
-このドキュメントと同じディレクトリにある`pyproject.toml`の内容をコピーし、生成された`pyproject.toml`に追記してください。次に、以下のコマンドを実行し、`poetry.lock`を作成してください。
+このドキュメントと同じディレクトリにある`pyproject.toml`の内容をコピーし、生成された`pyproject.toml`に追記すると共に、下記の`packages`の行も`tool.poetry`セクションに記述してください。
+
+```text
+[tool.poetry]
+name = "PROJECT_NAME"
+version = "PROJECT_VERSION"
+description = "DESCRIPTION"
+authors = ["NAME <EMAIL>"]
+readme = "README.md"
+packages = [{ include = "src" }, { include = "tests" }]    # これを記述する
+```
+
+次に、以下のコマンドを実行し、`poetry.lock`を作成してください。
 
 ```bash
 poetry install

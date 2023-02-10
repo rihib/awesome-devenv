@@ -68,6 +68,20 @@ poetry config virtualenvs.prefer-active-python true --local
 poetry install
 ```
 
+## Poetryを使った`sys.path.append`
+
+以下のように`packages`を`pyproject.toml`に記述することで、自動的に`sys.path`に`$<PRJ_NAME>_ROOT/src/`と`$<PRJ_NAME>_ROOT/tests/`を加えることができる。こうすることで、`sys.path.append`を記述せずに、`$<PRJ_NAME>_ROOT/tests/foo.py`から`$<PRJ_NAME>_ROOT/src/bar.py`を`import`できるようになる。
+
+```text
+[tool.poetry]
+name = "PROJECT_NAME"
+version = "PROJECT_VERSION"
+description = "DESCRIPTION"
+authors = ["NAME <EMAIL>"]
+readme = "README.md"
+packages = [{ include = "src" }, { include = "tests" }]    # これを記述する
+```
+
 ## グループ
 
 ### グループの作成
