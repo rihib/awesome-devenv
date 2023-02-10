@@ -142,6 +142,7 @@
         "pydevenv",
         "pyenv",
         "pyproject",
+        "pyright",
         "pytest",
         "Renv",
         "ritwickdey",
