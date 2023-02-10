@@ -374,12 +374,6 @@ mkdir ${PRJ_ROOT_PATH}/tests
 touch ${PRJ_ROOT_PATH}/tests/__init__.py
 echo -e "\n\n\nDirectories and files were created successfully.\n\n\n"
 
-# GitHubリポジトリにpushする
-git add -A
-git commit -m "プロジェクトを作成"
-git push
-echo -e "\n\n\nSuccessfully pushed to GitHub.\n\n\n"
-
 # 仮想環境を立ち上げる
 poetry shell
 
