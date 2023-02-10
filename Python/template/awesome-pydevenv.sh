@@ -352,6 +352,11 @@ echo -e ${PYPROJECT_TOML} >> ${PRJ_ROOT_PATH}/pyproject.toml
 poetry install
 echo -e "\n\n\nPoetry was installed and project directory was initialized successfully.\n\n\n"
 
+# マーカーを挿入
+echo -e "\n# end awesome-pydevenv\n" >> ~/.bashrc
+echo -e "\n# end awesome-pydevenv\n" >> ~/.bash_profile
+echo -e "\n# end awesome-pydevenv\n" >> ~/.profile
+
 # リンター・フォーマッターをインストールする
 poetry add --group dev bandit black flake8 isort mypy
 echo -e "\n\n\nLinters and formatters were installed successfully.\n\n\n"
@@ -378,9 +383,5 @@ echo -e "\n\n\nSuccessfully pushed to GitHub.\n\n\n"
 # 仮想環境を立ち上げる
 poetry shell
 
-# マーカーを挿入
-echo -e "\n# end awesome-pydevenv\n" >> ~/.bashrc
-echo -e "\n# end awesome-pydevenv\n" >> ~/.bash_profile
-echo -e "\n# end awesome-pydevenv\n" >> ~/.profile
-
+# 完了メッセージを表示
 echo -e "\n\n\nCompleted!!\n\n\n"
