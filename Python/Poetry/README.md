@@ -52,7 +52,7 @@ poetry install    # poetry.lockが生成される
 この`README.md`と同じ階層にある`pyproject.toml`の内容をコピーして、生成した`pyproject.toml`に追記する。追記した後は、以下のコマンドを実行して、変更を`poetry.lock`に反映させる必要がある。
 
 ```bash
-poetry lock --no-update
+poetry install
 ```
 
 ## 既存のプロジェクトが存在する場合
@@ -230,19 +230,9 @@ poetry shell
 exit
 ```
 
-### `poetry.lock`のバージョンを更新せずにファイルのみ更新する
-
-`no-update`オプションをつけることで、ロックされたバージョンは更新せずに、`poetry.lock`だけ更新することができる。
-
-```bash
-poetry lock --no-update
-```
-
 ### `poetry.lock`のパッケージのバージョンを更新する
 
 再度、`pyproject.toml`で指定した条件の中で一番最新のバージョンが`poetry.lock`に書き込まれる。これは`poetry.lock`を削除して`poetry install`を実行するのと同じことである。
-
-`pyproject.toml`を手動で変更した際に、その変更を`poetry.lock`に適用するのにも使えるが、その際は他のパッケージのバージョンも意図せず上がってしまう可能性があるので、なるべく手動で変更するのを避け、コマンドを使用して変更を加える必要がある。
 
 ```bash
 poetry update
