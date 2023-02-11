@@ -68,7 +68,16 @@ poetry install
 
 手動で環境構築したい場合はこの項をスキップして、次の項からはじめてください。
 
-### 1.1.4 環境変数`<PRJ_NAME>_ROOT`を作成
+### 1.1.4 必要なパッケージをインストールする
+
+このパッケージをインストールしないと、Pythonのスクリプトを実行できない場合が出てくる。
+
+```bash
+sudo apt update
+sudo apt install libbz2-dev
+```
+
+### 1.1.5 環境変数`<PRJ_NAME>_ROOT`を作成
 
 以下のコマンドを実行し、プロジェクトルートディレクトリの絶対パスを値にもつ環境変数`<PRJ_NAME>_ROOT`を作成してください。
 
@@ -79,7 +88,7 @@ echo "export <PRJ_NAME>_ROOT=<PRJ_ROOT_PATH>" >> ~/.profile
 exec $SHELL
 ```
 
-### 1.1.5 Gitの設定
+### 1.1.6 Gitの設定
 
 以下のコマンドを実行し、Gitの設定をしてください。
 
@@ -88,7 +97,7 @@ git config --global user.name <YOUR_USER_NAME>
 git config --global user.email <YOUR_USER_EMAIL>
 ```
 
-### 1.1.6 プロジェクトルートディレクトリの作成
+### 1.1.7 プロジェクトルートディレクトリの作成
 
 以下のコマンドを実行し、プロジェクトルートディレクトリを作成してください。
 
@@ -97,7 +106,7 @@ mkdir -p $<PRJ_NAME>_ROOT
 git clone <YOUR_GITHUB_REPOSITORY_URL> $<PRJ_NAME>_ROOT
 ```
 
-### 1.1.7 anyenvのインストール
+### 1.1.8 anyenvのインストール
 
 以下のコマンドを実行して、anyenvをインストールしてください。
 
@@ -117,7 +126,7 @@ mkdir -p $(anyenv root)/plugins
 git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
 ```
 
-### 1.1.8 pyenvとPythonのインストール
+### 1.1.9 pyenvとPythonのインストール
 
 以下のコマンドを実行して、pyenvとPythonをインストールしてください。
 
@@ -142,7 +151,7 @@ pyenv rehash
 pyenv global 3.11.1
 ```
 
-### 1.1.9 Poetryのインストールと初期化
+### 1.1.10 Poetryのインストールと初期化
 
 以下のコマンドを実行して、Poetryをインストールするとともに、プロジェクトルートディレクトリを初期化してください。
 
@@ -178,7 +187,7 @@ packages = [{ include = "src" }, { include = "tests" }]    # これを記述す�
 poetry install
 ```
 
-### 1.1.10 開発ツールをインストールする
+### 1.1.11 開発ツールをインストールする
 
 以下のコマンドを実行し、開発ツールをインストールしてください。
 
@@ -186,7 +195,7 @@ poetry install
 poetry add --group dev bandit black flake8 isort mypy pytest
 ```
 
-### 1.1.11 VSCodeの設定
+### 1.1.12 VSCodeの設定
 
 以下のコマンドを実行してプロジェクトルートディレクトリ直下に`.vscode/settings.json`を作成してください。
 
@@ -199,7 +208,7 @@ touch $<PRJ_NAME>_ROOT/.vscode/settings.json
 
 最後に、一旦SSH接続を切り、再度接続し直してください。再接続時に拡張機能がインストールされます。
 
-### 1.1.12 必要なディレクトリとファイルを作成する
+### 1.1.13 必要なディレクトリとファイルを作成する
 
 以下のコマンドを実行し、必要なディレクトリとファイルを作成してください。
 
@@ -210,7 +219,7 @@ mkdir $<PRJ_NAME>_ROOT/tests
 touch $<PRJ_NAME>_ROOT/tests/__init__.py
 ```
 
-### 1.1.13 仮想環境を立ち上げる
+### 1.1.14 仮想環境を立ち上げる
 
 以下のコマンドを実行して、仮想環境を立ち上げてください。
 
@@ -218,7 +227,7 @@ touch $<PRJ_NAME>_ROOT/tests/__init__.py
 poetry shell
 ```
 
-### 1.1.14 GitHubリポジトリにコミットする
+### 1.1.15 GitHubリポジトリにコミットする
 
 プロジェクトの作成と初期化が終わったので、一旦GitHubリポジトリにコミットするようにしましょう。
 
@@ -266,7 +275,16 @@ poetry install
 
 手動で環境構築したい場合はこの項をスキップして、次の項からはじめてください。
 
-### 1.2.3 環境変数`<PRJ_NAME>_ROOT`を作成
+### 1.2.3 必要なパッケージをインストールする
+
+このパッケージをインストールしないと、Pythonのスクリプトを実行できない場合が出てくる。
+
+```bash
+sudo apt update
+sudo apt install libbz2-dev
+```
+
+### 1.2.4 環境変数`<PRJ_NAME>_ROOT`を作成
 
 以下のコマンドを実行し、プロジェクトルートディレクトリの絶対パスを値にもつ環境変数`<PRJ_NAME>_ROOT`を作成してください。
 
@@ -277,7 +295,7 @@ echo "export <PRJ_NAME>_ROOT=<PRJ_ROOT_PATH>" >> ~/.profile
 exec $SHELL
 ```
 
-### 1.2.4 Gitの設定
+### 1.2.5 Gitの設定
 
 以下のコマンドを実行し、Gitの設定をしてください。
 
@@ -286,7 +304,7 @@ git config --global user.name <YOUR_USER_NAME>
 git config --global user.email <YOUR_USER_EMAIL>
 ```
 
-### 1.2.5 プロジェクトルートディレクトリの作成
+### 1.2.6 プロジェクトルートディレクトリの作成
 
 以下のコマンドを実行し、プロジェクトルートディレクトリを作成してください。
 
@@ -295,7 +313,7 @@ mkdir -p $<PRJ_NAME>_ROOT
 git clone <YOUR_GITHUB_REPOSITORY_URL> $<PRJ_NAME>_ROOT
 ```
 
-### 1.2.6 anyenvのインストール
+### 1.2.7 anyenvのインストール
 
 以下のコマンドを実行して、anyenvをインストールしてください。
 
@@ -315,7 +333,7 @@ mkdir -p $(anyenv root)/plugins
 git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
 ```
 
-### 1.2.7 pyenvとPythonのインストール
+### 1.2.8 pyenvとPythonのインストール
 
 以下のコマンドを実行して、pyenvとPythonをインストールしてください。
 
@@ -340,7 +358,7 @@ pyenv rehash
 pyenv global 3.11.1
 ```
 
-### 1.2.8 Poetryのインストールと初期化
+### 1.2.9 Poetryのインストールと初期化
 
 以下のコマンドを実行して、Poetryをインストールするとともに、必要なパッケージを仮想環境にインストールしてください。
 
@@ -358,7 +376,7 @@ poetry install
 
 完了したら、一旦SSH接続を切り、再度接続し直してください。再接続時に拡張機能がインストールされます。
 
-### 1.2.9 仮想環境を立ち上げる
+### 1.2.10 仮想環境を立ち上げる
 
 以下のコマンドを実行して、仮想環境を立ち上げてください。
 
