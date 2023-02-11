@@ -40,6 +40,7 @@
 		"${workspaceFolder}/.venv/lib/python*/site-packages/",
 	],
     "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.inlayHints.variableTypes": true,
     "python.analysis.typeCheckingMode": "strict",
     "python.autoComplete.extraPaths": [
@@ -63,6 +64,7 @@
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
+    "python.testing.pytestPath": "${workspaceFolder}/.venv/bin/pytest",
     "isort.check": true,
     "isort.showNotifications": "onWarning",
     "isort.path": [

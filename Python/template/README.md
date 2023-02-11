@@ -237,4 +237,8 @@ poetry shell
 
 ここに書いてある概要は[Python testing in Visual Studio Code](https://code.visualstudio.com/docs/python/testing#_a-little-background-on-unit-testing)を参照しています。より詳細な概要を知りたい場合は[Unit testing - Wikipedia](https://en.wikipedia.org/wiki/Unit_testing)、具体的な実行方法を知りたい場合は[gwtw/py-sorting - GitHub](https://github.com/gwtw/py-sorting)を参照してください。
 
+##### 2.3.2.1 VSCodeとpytestを使ったユニットテスト
+
+VSCodeとpytestを使ってユニットテストを行います。使い方については[Python testing in Visual Studio Code](https://code.visualstudio.com/docs/python/testing)を参照してください。
+
 ### 2.4 ロギング

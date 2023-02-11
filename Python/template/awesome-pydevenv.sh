@@ -240,6 +240,7 @@ SETTINGS_JSON='
 		"${workspaceFolder}/.venv/lib/python*/site-packages/",\n
 	],\n
     "python.analysis.inlayHints.functionReturnTypes": true,\n
+    "python.analysis.inlayHints.pytestParameters": true,\n
     "python.analysis.inlayHints.variableTypes": true,\n
     "python.analysis.typeCheckingMode": "strict",\n
     "python.autoComplete.extraPaths": [\n
@@ -263,6 +264,7 @@ SETTINGS_JSON='
     ],\n
     "python.testing.unittestEnabled": false,\n
     "python.testing.pytestEnabled": true,\n
+    "python.testing.pytestPath": "${workspaceFolder}/.venv/bin/pytest",\n
     "isort.check": true,\n
     "isort.showNotifications": "onWarning",\n
     "isort.path": [\n
