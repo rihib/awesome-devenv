@@ -42,7 +42,11 @@ if [ "$PS1" != "" ]; then
 
 ### 1.1.x シェルスクリプトを実行する
 
-このドキュメントと同じディレクトリにある`awesome-pydevenv.sh`をサーバーの任意の場所に置き、変数の値を適切なものに変更してください。変更したら、以下のコマンドで実行すると自動で環境構築が行われます。
+このドキュメントと同じディレクトリにある`create-pyprj.sh`をサーバーの任意の場所に置き、変数の値を適切なものに変更してください。変更したら、以下のコマンドで実行すると自動で環境構築が行われます。
+
+```bash
+source /path/to/create-pyprj.sh
+```
 
 完了したら、下記のように`pyproject.toml`に`packages`を追加し、次に以下のコマンドを手動で実行してください。
 
@@ -63,10 +67,6 @@ poetry install
 最後に、一旦SSH接続を切り、再度接続し直してください。再接続時に拡張機能がインストールされます。
 
 手動で環境構築したい場合はこの項をスキップして、次の項からはじめてください。
-
-```bash
-source /path/to/awesome-pydevenv.sh
-```
 
 ### 1.1.4 環境変数`<PRJ_NAME>_ROOT`を作成
 
@@ -225,6 +225,146 @@ poetry shell
 ### 1.2 既存プロジェクト
 
 既存プロジェクトに参加する人は以下の手順で環境構築をしてください。
+
+### 1.2.1 Cloud9環境の新規作成
+
+1. Cloud9環境を作成
+   - インスタンスタイプは`t3.large`を選択
+   - OSは`Ubuntu Server 18.04 LTS`を選択
+   - `Network settings`の`Connection`は`Secure Shell(SSH)`を選択
+1. EC2インスタンスのセキュリティグループの設定を編集
+1. `cloud9`という名前のキーペアを作成し、ローカルの`~/.ssh`下に配置
+1. 作成したCloud9を開き、画面左側のディレクトリ一覧の右上にある歯車マーク（設定ボタン）を押し「Show Hidden Files」と「Show Home in Favorites」にチェックを入れ、`~/.ssh/authorized_keys`を開き、ローカルの`~/.ssh/cloud9.pub`に書いてある公開鍵をコピペ
+1. ローカルの`~/.ssh/config`を編集
+1. VSCodeからCloud9にSSH接続
+
+### 1.2.2 Gitの`core.editor`をVimに変更する
+
+以下のように`~/.bashrc`の該当の箇所を変更してください。
+
+```shell
+# modifications needed only in interactive mode
+if [ "$PS1" != "" ]; then
+    # Set default editor for git
+    # git config --global core.editor nano    # この行をコメントアウト
+    git config --global core.editor 'vim -c "set fenc=utf-8"'    # この行を追記
+```
+
+### 1.2.x シェルスクリプトを実行する
+
+このドキュメントと同じディレクトリにある`install-pyprj.sh`をサーバーの任意の場所に置き、変数の値を適切なものに変更してください。変更したら、以下のコマンドで実行すると自動で環境構築が行われます。
+
+```bash
+source /path/to/create-pyprj.sh
+```
+
+```bash
+poetry install
+```
+
+最後に、一旦SSH接続を切り、再度接続し直してください。再接続時に拡張機能がインストールされます。
+
+手動で環境構築したい場合はこの項をスキップして、次の項からはじめてください。
+
+### 1.2.3 環境変数`<PRJ_NAME>_ROOT`を作成
+
+以下のコマンドを実行し、プロジェクトルートディレクトリの絶対パスを値にもつ環境変数`<PRJ_NAME>_ROOT`を作成してください。
+
+```bash
+echo "export <PRJ_NAME>_ROOT=<PRJ_ROOT_PATH>" >> ~/.bashrc
+echo "export <PRJ_NAME>_ROOT=<PRJ_ROOT_PATH>" >> ~/.bash_profile
+echo "export <PRJ_NAME>_ROOT=<PRJ_ROOT_PATH>" >> ~/.profile
+exec $SHELL
+```
+
+### 1.2.4 Gitの設定
+
+以下のコマンドを実行し、Gitの設定をしてください。
+
+```bash
+git config --global user.name <YOUR_USER_NAME>
+git config --global user.email <YOUR_USER_EMAIL>
+```
+
+### 1.2.5 プロジェクトルートディレクトリの作成
+
+以下のコマンドを実行し、プロジェクトルートディレクトリを作成してください。
+
+```bash
+mkdir -p $<PRJ_NAME>_ROOT
+git clone <YOUR_GITHUB_REPOSITORY_URL> $<PRJ_NAME>_ROOT
+```
+
+### 1.2.6 anyenvのインストール
+
+以下のコマンドを実行して、anyenvをインストールしてください。
+
+```bash
+git clone https://github.com/anyenv/anyenv ~/.anyenv
+echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile
+echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.profile
+~/.anyenv/bin/anyenv init
+echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
+exec $SHELL
+echo y | anyenv install --init
+pushd $(anyenv root)
+git checkout v1.1.5
+popd
+mkdir -p $(anyenv root)/plugins
+git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
+```
+
+### 1.2.7 pyenvとPythonのインストール
+
+以下のコマンドを実行して、pyenvとPythonをインストールしてください。
+
+```bash
+anyenv install pyenv
+exec $SHELL -l
+echo 'export PYENV_ROOT="$(anyenv root)/envs/pyenv"' >> ~/.bashrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+echo 'export PYENV_ROOT="$(anyenv root)/envs/pyenv"' >> ~/.bash_profile
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
+echo 'export PYENV_ROOT="$(anyenv root)/envs/pyenv"' >> ~/.profile
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
+echo 'eval "$(pyenv init -)"' >> ~/.profile
+exec $SHELL
+pushd $(pyenv root)
+git checkout v2.3.12
+popd
+pyenv install 3.11.1
+pyenv rehash
+pyenv global 3.11.1
+```
+
+### 1.2.8 Poetryのインストールと初期化
+
+以下のコマンドを実行して、Poetryをインストールするとともに、必要なパッケージを仮想環境にインストールしてください。
+
+```bash
+curl -sSL https://install.python-poetry.org | POETRY_HOME=$HOME/.poetry POETRY_VERSION=1.3.2 python3 -
+echo 'export PATH=$HOME/.poetry/bin:$PATH' >> ~/.bashrc
+echo 'export PATH=$HOME/.poetry/bin:$PATH' >> ~/.bash_profile
+echo 'export PATH=$HOME/.poetry/bin:$PATH' >> ~/.profile
+exec $SHELL
+cd $<PRJ_NAME>_ROOT
+pyenv local 3.11.1
+python -m venv .venv
+poetry install
+```
+
+完了したら、一旦SSH接続を切り、再度接続し直してください。再接続時に拡張機能がインストールされます。
+
+### 1.2.9 仮想環境を立ち上げる
+
+以下のコマンドを実行して、仮想環境を立ち上げてください。
+
+```bash
+poetry shell
+```
 
 ## 2. コーディング
 
