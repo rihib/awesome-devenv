@@ -86,7 +86,6 @@ exec $SHELL
 ```bash
 git config --global user.name <YOUR_USER_NAME>
 git config --global user.email <YOUR_USER_EMAIL>
-git config --global core.editor vim
 ```
 
 ### 1.1.6 プロジェクトルートディレクトリの作成

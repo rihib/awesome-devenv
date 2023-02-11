@@ -290,7 +290,6 @@ echo -e "\n\n\n${PRJ_ROOT} was set successfully.\n\n\n"
 # Gitの設定
 git config --global user.name ${YOUR_USER_NAME}
 git config --global user.email ${YOUR_USER_EMAIL}
-git config --global core.editor vim
 echo -e "\n\n\nGit was configured successfully.\n\n\n"
 
 # プロジェクトルートディレクトリの作成
