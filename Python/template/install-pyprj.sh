@@ -11,9 +11,6 @@ ANYENV_VERSION="v1.1.5"
 PYENV_VERSION="v2.3.12"
 PYTHON_VERSION="3.11.1"
 POETRY_VERSION="1.3.2"
-YOUR_PRJ_NAME="tmp"
-DESCRIPTION="description"
-AUTHOR="rihib <rihib@rihib.dev>"
 
 # マーカーを挿入
 echo -e "\n\n# begin awesome-pydevenv\n" >> ~/.bashrc
