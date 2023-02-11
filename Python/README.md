@@ -1,14 +1,8 @@
 # Python
 
-## リンター・フォーマッターの有効化
+## 型アノテーション
 
-以下のコマンドを実行し、必要なリンター・フォーマッターをインストールする。
-
-```bash
-cd $<PRJ_NAME>_ROOT
-pyenv local 3.11.1
-poetry add --group dev bandit black flake8 isort mypy
-```
+型ヒントの書き方については[typing --- 型ヒントのサポート](https://docs.python.org/ja/3/library/typing.html#module-contents)を参照してください。
 
 ## VSCode拡張機能
 
