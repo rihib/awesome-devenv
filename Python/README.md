@@ -4,6 +4,15 @@
 
 型ヒントの書き方については[typing --- 型ヒントのサポート](https://docs.python.org/ja/3/library/typing.html#module-contents)を参照してください。
 
+## `if __name__ == "__main__"`
+
+Pythonファイルの末尾には、そのPythonファイルがコマンドラインからスクリプトとして実行されたときに行う処理を記述すること。
+
+```python
+if __name__ == "__main__":
+    pass
+```
+
 ## VSCode拡張機能
 
 ### autoDocstring
