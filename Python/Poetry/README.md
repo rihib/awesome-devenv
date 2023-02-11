@@ -227,7 +227,7 @@ poetry run pytest
 
 ```bash
 poetry shell
-exit
+deactivate
 ```
 
 ### `poetry.lock`のパッケージのバージョンを更新する
