@@ -259,6 +259,7 @@ SETTINGS_JSON='
     "python.linting.mypyPath": "${workspaceFolder}/.venv/bin/mypy",\n
     "python.linting.banditEnabled": true,\n
     "python.linting.banditPath": "${workspaceFolder}/.venv/bin/bandit",\n
+    "python.testing.debugPort": 54237,\n
     "python.testing.pytestArgs": [\n
         "tests",\n
     ],\n

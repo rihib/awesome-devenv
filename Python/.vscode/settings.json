@@ -59,6 +59,7 @@
     "python.linting.mypyPath": "${workspaceFolder}/.venv/bin/mypy",
     "python.linting.banditEnabled": true,
     "python.linting.banditPath": "${workspaceFolder}/.venv/bin/bandit",
+    "python.testing.debugPort": 54237,
     "python.testing.pytestArgs": [
         "tests",
     ],
