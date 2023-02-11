@@ -28,6 +28,18 @@ GitHubにてリポジトリを作成してください。その際、`README.md`
 1. ローカルの`~/.ssh/config`を編集
 1. VSCodeからCloud9にSSH接続
 
+### 1.1.3 Gitの`core.editor`をVimに変更する
+
+以下のように`~/.bashrc`の該当の箇所を変更してください。
+
+```shell
+# modifications needed only in interactive mode
+if [ "$PS1" != "" ]; then
+    # Set default editor for git
+    # git config --global core.editor nano    # この行をコメントアウト
+    git config --global core.editor 'vim -c "set fenc=utf-8"'    # この行を追記
+```
+
 ### 1.1.x シェルスクリプトを実行する
 
 このドキュメントと同じディレクトリにある`awesome-pydevenv.sh`をサーバーの任意の場所に置き、変数の値を適切なものに変更してください。変更したら、以下のコマンドで実行すると自動で環境構築が行われます。
@@ -56,7 +68,7 @@ poetry install
 source /path/to/awesome-pydevenv.sh
 ```
 
-### 1.1.3 環境変数`<PRJ_NAME>_ROOT`を作成
+### 1.1.4 環境変数`<PRJ_NAME>_ROOT`を作成
 
 以下のコマンドを実行し、プロジェクトルートディレクトリの絶対パスを値にもつ環境変数`<PRJ_NAME>_ROOT`を作成してください。
 
@@ -67,7 +79,7 @@ echo "export <PRJ_NAME>_ROOT=<PRJ_ROOT_PATH>" >> ~/.profile
 exec $SHELL
 ```
 
-### 1.1.4 Gitの設定
+### 1.1.5 Gitの設定
 
 以下のコマンドを実行し、Gitの設定をしてください。
 
@@ -77,7 +89,7 @@ git config --global user.email <YOUR_USER_EMAIL>
 git config --global core.editor vim
 ```
 
-### 1.1.5 プロジェクトルートディレクトリの作成
+### 1.1.6 プロジェクトルートディレクトリの作成
 
 以下のコマンドを実行し、プロジェクトルートディレクトリを作成してください。
 
@@ -86,7 +98,7 @@ mkdir -p $<PRJ_NAME>_ROOT
 git clone <YOUR_GITHUB_REPOSITORY_URL> $<PRJ_NAME>_ROOT
 ```
 
-### 1.1.6 anyenvのインストール
+### 1.1.7 anyenvのインストール
 
 以下のコマンドを実行して、anyenvをインストールしてください。
 
@@ -106,7 +118,7 @@ mkdir -p $(anyenv root)/plugins
 git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
 ```
 
-### 1.1.7 pyenvとPythonのインストール
+### 1.1.8 pyenvとPythonのインストール
 
 以下のコマンドを実行して、pyenvとPythonをインストールしてください。
 
@@ -131,7 +143,7 @@ pyenv rehash
 pyenv global 3.11.1
 ```
 
-### 1.1.8 Poetryのインストールと初期化
+### 1.1.9 Poetryのインストールと初期化
 
 以下のコマンドを実行して、Poetryをインストールするとともに、プロジェクトルートディレクトリを初期化してください。
 
@@ -167,7 +179,7 @@ packages = [{ include = "src" }, { include = "tests" }]    # これを記述す�
 poetry install
 ```
 
-### 1.1.9 開発ツールをインストールする
+### 1.1.10 開発ツールをインストールする
 
 以下のコマンドを実行し、開発ツールをインストールしてください。
 
@@ -175,7 +187,7 @@ poetry install
 poetry add --group dev bandit black flake8 isort mypy pytest
 ```
 
-### 1.1.10 VSCodeの設定
+### 1.1.11 VSCodeの設定
 
 以下のコマンドを実行してプロジェクトルートディレクトリ直下に`.vscode/settings.json`を作成してください。
 
@@ -188,7 +200,7 @@ touch $<PRJ_NAME>_ROOT/.vscode/settings.json
 
 最後に、一旦SSH接続を切り、再度接続し直してください。再接続時に拡張機能がインストールされます。
 
-### 1.1.11 必要なディレクトリとファイルを作成する
+### 1.1.12 必要なディレクトリとファイルを作成する
 
 以下のコマンドを実行し、必要なディレクトリとファイルを作成してください。
 
@@ -199,7 +211,7 @@ mkdir $<PRJ_NAME>_ROOT/tests
 touch $<PRJ_NAME>_ROOT/tests/__init__.py
 ```
 
-### 1.1.12 仮想環境を立ち上げる
+### 1.1.13 仮想環境を立ち上げる
 
 以下のコマンドを実行して、仮想環境を立ち上げてください。
 
@@ -207,7 +219,7 @@ touch $<PRJ_NAME>_ROOT/tests/__init__.py
 poetry shell
 ```
 
-### 1.1.13 GitHubリポジトリにコミットする
+### 1.1.14 GitHubリポジトリにコミットする
 
 プロジェクトの作成と初期化が終わったので、一旦GitHubリポジトリにコミットするようにしましょう。
 
