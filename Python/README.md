@@ -49,80 +49,205 @@ if __name__ == "__main__":
     pass
 ```
 
-## VSCode拡張機能
+## Docstring
 
-### GoogleスタイルのDocstring
+ここではGoogleスタイルのDocstringについて説明します。他にもNumpyスタイルなどがあります。
 
 クラスやメソッドを書き終わったあと、宣言文の下にクオーテーションを３つ入力し、`Enter`を押すと、Docstringを自動生成できます。自動生成されるDocstringのスタイルについては[autoDocstring - Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring#:~:text=and%20parameter%20types-,Docstring%20Formats,-To%20turn%20off)を参照してください。
 
-具体的な書き方については[Comments and Docstrings - Google Python Style Guide](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)を参照してください。
+以下の説明は、[Comments and Docstrings - Google Python Style Guide](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)を参照しています。
+
+### Docstringとは
+
+Docstringは、そのモジュール・関数・クラスを呼び出して使用する人が、コードを見なくても、呼び出して使用できるようにするためのものです。コードを読みやすくするためのものではないことに注意してください。なので、呼び出して使用するのに必要な最低限の説明だけあれば十分で、それ以上の実装の詳細などを記述する必要はありません。
+
+### 書き方
+
+- [ ] 常に３つのダブルクオートを使用[^2]
+- [ ] 一番最初の行に１行に収まる要約を書く
+- [ ] 要約のあとに空白行を１つ挟んでからより詳細な説明を記述する
+- [ ] 断片的な文章ではなく、物語のテキストと同じように読みやすい完全な文章にする
+- [ ] スタイルに一貫性を持たせる
+
+[^2]: [PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/#:~:text=always%20use%20%22%22%22triple%20double%20quotes%22%22%22%20around%20docstrings)
+
+#### モジュール
+
+- [ ] 必須
+- [ ] ファイルの先頭（import文よりも前）に書く
+- [ ] モジュールの内容と使用方法を記述する
+- [ ] すべてのファイルに、プロジェクトで使用されているライセンスの定型文を含める必要がある
 
 ```python
-# Google Docstring Format
-"""A one line summary of the module or program, terminated by a period.
+"""モジュールまたはプログラムの概要を1行で記述し、句点またはピリオドで終了させる。
 
-Leave one blank line.  The rest of this docstring should contain an
-overall description of the module or program.  Optionally, it may also
-contain a brief description of exported classes and functions and/or usage
-examples.
+空白行を１つ挟むこと。 このDocstringの残りの部分は、モジュールやプログラムの全体的な説明を含む必要がある。
+オプションとして、`export`されたクラスや関数の簡単な説明や使用例を含めることもできる。
 
-Typical usage example:
+典型的な使用例：
 
-  foo = ClassFoo()
-  bar = foo.FunctionBar()
+    foo = ClassFoo()
+    bar = foo.FunctionBar()
 """
+```
 
-import example
+##### テストモジュール
 
+- [ ] テストファイルには、モジュールレベルのDocstringは必要がなければ書かなくていい
+- [ ] 追加で提供できる情報（テストの実行方法に関する詳細な説明、 珍しい設定パターン、外部環境への依存性など）がある場合にのみ記述する
+- [ ] すでに自明な情報は記述しないこと
 
+```python
+"""このblazeテストはgoldenファイルを使用する。
+
+`google3`ディレクトリの`blaze run //foo/bar:foo_test -- --update_golden_files`を実行することで、goldenファイルを更新できる。
+"""
+```
+
+```python
+"""`foo.bar`用のテスト。
+
+これは良くない例。上記の要約はすでに自明な情報しか記述されてないので、このDocstringは削除する必要がある。
+"""
+```
+
+#### クラス
+
+- [ ] クラスに公開属性がある場合は、`Attributes`セクションに記述する（書式は、後述する「関数・メソッド」の`Args`と同じ）
+- [ ] 要約行には、そのクラスのインスタンスが何を表しているかの説明を書く
+- [ ] そのクラスがどういうクラスであるというような、すでに自明な情報を記述してはならない
+
+```python
 class SampleClass:
-    """Summary of class here.
+    """クラスの要約をここに書く。
 
-    Longer class information...
-    Longer class information...
+    より詳細なクラスの情報...
+    より詳細なクラスの情報...
 
     Attributes:
-        likes_spam: A boolean indicating if we like SPAM or not.
-        eggs: An integer count of the eggs we have laid.
+        likes_spam: スパムを好むか否かを示すブール値。
+        eggs: 産んだ卵の数を表す整数。
     """
 
     def __init__(self, likes_spam: bool = False):
-        """Inits SampleClass with blah."""
+        """なになにのクラスを初期化する。"""
         self.likes_spam = likes_spam
         self.eggs = 0
 
-    def fetch_smalltable_rows(table_handle: smalltable.Table,
-                            keys: Sequence[Union[bytes, str]],
-                            require_all_keys: bool = False,
-        ) -> Mapping[bytes, tuple[str, ...]]:
-        """Fetches rows from a Smalltable.
+    def public_method(self):
+        """なになにという処理を実行する。"""
+```
 
-        Retrieves rows pertaining to the given keys from the Table instance
-        represented by table_handle.  String keys will be UTF-8 encoded.
+```python
+# OK:
+class CheeseShopAddress:
+    """チーズショップの住所。
 
-        Args:
-            table_handle:
-                An open smalltable.Table instance.
-            keys:
-                A sequence of strings representing the key of each table row to
-                fetch.  String keys will be UTF-8 encoded.
-            require_all_keys:
-                If True only rows with values set for all keys will be returned.
+    要約には、このクラスのインスタンスが何を表してるかを記述する。
+    """
 
-        Returns:
-            A dict mapping keys to the corresponding table row data
-            fetched. Each row is represented as a tuple of strings. For
-            example:
+class OutOfCheeseError(Exception):
+    """チーズが売り切れ。
 
-            {b'Serak': ('Rigel VII', 'Preparer'),
-            b'Zim': ('Irk', 'Invader'),
-            b'Lrrr': ('Omicron Persei 8', 'Emperor')}
+    発生する例外が何を表しているのかを記述する。
+    """`
 
-            Returned keys are always bytes.  If a key from the keys argument is
-            missing from the dictionary, then that row was not found in the
-            table (and require_all_keys must have been False).
+# ダメ:
+class CheeseShopAddress:
+    """チーズショップの住所を記述するクラス。
 
-        Raises:
-            IOError: An error occurred accessing the smalltable.
-        """
+    このクラスがどういうクラスであるという説明を記述してはならない。
+    """
+
+class OutOfCheeseError(Exception):
+    """チーズがなくなったときに例外が発生する。
+
+    例外が発生するコンテキストではなく、例外が何を表しているのかを記述する必要がある。
+    """
+```
+
+#### 関数・メソッド
+
+- [ ] コードを読まなくても、その関数の呼び出しを記述するのに十分な情報を提供する
+- [ ] 関数の呼び出し構文とその意味を記述する
+- [ ] その関数の使用方法に関連するものでなければ、実装の詳細については記述しない
+- [ ] 呼び出し側に関係ないが、重要な関数の実装に関しては、docstringではなく、コードと一緒にコメントとして記述する
+- [ ] ベースクラスからメソッドをオーバーライドするメソッドは、ベースクラスと共通する情報がある場合は、単にベースクラスを見るように記述するに留める
+- [ ] 関数は、`Args`、`Returns`（`Yields`）、`Raises`のセクションを、必要に応じて持つ
+- [ ] セクションは、コロンで終わる見出し行と、その下でインデントされた説明文を持つ
+
+##### セクション
+
+###### `Args`
+
+- [ ] 各パラメータの名前を列挙する
+- [ ] パラメータの名前の後に説明文が続く（インデントはしてもしなくてもいい）
+- [ ] コードに型ヒントが書かれていない場合は、説明文に型を記述する
+- [ ] 引数が、`*args`や`**kwargs`の場合は、引数の名前にアスタリスクをつけて、`*foo`や`**bar`のように記述する
+
+###### `Returns`（`Yields`）
+
+- [ ] ジェネレーターの場合は`Yields`を使用する
+- [ ] 戻り値の型と説明を記述する
+- [ ] 関数がNoneを返す（戻り値を持たないなど）場合は、このセクションは必要ない
+- [ ] 戻り値がタプルの場合は、「戻り値`tuple(mat_a, mat_b)`。`mat_a`は...。`mat_b`は...。」のように記述する
+
+###### `Raises`
+
+- [ ] そのインターフェースに関連するすべての例外を説明と共に列挙する
+- [ ] パラメータの名前の後に説明文が続く（インデントはしてもしなくてもいい）
+- [ ] Docstringで指定したAPIに違反した場合に発生する例外は記述しない（逆説的にAPIに違反した動作をAPIの使用の一部にしてしまうため）
+
+```python
+def fetch_smalltable_rows(table_handle: smalltable.Table,
+                          keys: Sequence[Union[bytes, str]],
+                          require_all_keys: bool = False,
+) -> Mapping[bytes, tuple[str, ...]]:
+    """`smalltable`から行を取得する。
+
+    与えられたキーに対応する行を、テーブルのインスタンス`table_handle`から、
+    指定されたキーに対応する行を取得する。 文字列のキーはUTF-8でエンコードされる。
+
+    Args:
+        table_handle:
+            オープンな`smalltable`。テーブルインスタンス。
+        keys:
+            取得する各テーブル行のキーを表す文字列の列。文字列のキーはUTF-8でエンコードされる。
+        require_all_keys:
+            `True`の場合、すべてのキーに値が設定されている行のみが返される。
+
+    Returns:
+        取得したキーと対応するテーブルの行のデータを対応付ける辞書。
+        各行は文字列のタプルとして表現される。
+        例えば：
+
+        {b'Serak': ('Rigel VII', 'Preparer'),
+        b'Zim': ('Irk', 'Invader'),
+        b'Lrrr': ('Omicron Persei 8', 'Emperor')}
+
+        返されるキーは常にバイトである。 引数`keys`のキーが辞書にない場合、
+        その行はテーブル上で見つからなかったということである（その場合、`require_all_keys`は`False`になるはずである）。
+
+    Raises:
+        IOError: `smalltable`にアクセスする際に発生するエラー。
+    """
+```
+
+## コメント
+
+コードの明らかでない部分についてコメントを書く。複雑な処理の前には複数行のコメントをつける。明らかでないものは、行末にコメントを書く。
+
+また、物語のテキストのように読みやすくする必要がある。断片的な文章ではなく、完全な文章を記述すること。
+
+```python
+# `i`が配列のどこにあるかを調べるために、重み付き辞書検索を使用する。
+# 配列中の最大の数値と配列サイズから位置を推定し、バイナリサーチを行って正確な数値を求める。
+if i & (i - 1) == 0:    # `i`が０または２のべき乗のとき真。
+```
+
+コードについては絶対に記述しないこと。コードを読む人は自分よりもPythonのこと（自分のやろうとしていることではないことに注意）をよく知っていると仮定すること。
+
+```python
+# 悪いコメント例：次に，`b`配列を調べて，`i`が現れるたびに
+# 次の要素が`i+1`であることを確認する。
 ```
