@@ -51,46 +51,78 @@ if __name__ == "__main__":
 
 ## VSCode拡張機能
 
-### Docstring
+### GoogleスタイルのDocstring
 
-クラスやメソッドを書き終わったあと、宣言文の下にクオーテーションを３つ入力し、`Enter`を押すと、Docstringを自動生成できます。
+クラスやメソッドを書き終わったあと、宣言文の下にクオーテーションを３つ入力し、`Enter`を押すと、Docstringを自動生成できます。自動生成されるDocstringのスタイルについては[autoDocstring - Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring#:~:text=and%20parameter%20types-,Docstring%20Formats,-To%20turn%20off)を参照してください。
 
-Docstringのスタイルについては[autoDocstring - Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring#:~:text=and%20parameter%20types-,Docstring%20Formats,-To%20turn%20off)を参照。ここでは、Docstringのスタイルに`google`を選択しています。
-
-以下は、アンダーバー（`_ _`）で囲まれている部分はプレースホルダーです。具体的な書き方については[Comments and Docstrings - Google Python Style Guide](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)と[Example Google Style Python Docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)を参照してください。
+具体的な書き方については[Comments and Docstrings - Google Python Style Guide](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)を参照してください。
 
 ```python
 # Google Docstring Format
-"""_summary_
+"""A one line summary of the module or program, terminated by a period.
 
-モジュール全体の説明。import文よりも前に書く必要がある。
+Leave one blank line.  The rest of this docstring should contain an
+overall description of the module or program.  Optionally, it may also
+contain a brief description of exported classes and functions and/or usage
+examples.
 
+Typical usage example:
+
+  foo = ClassFoo()
+  bar = foo.FunctionBar()
 """
 
-import character
+import example
 
-class Alphabet:
-    """_summary_
 
-    クラス全体の説明
+class SampleClass:
+    """Summary of class here.
 
+    Longer class information...
+    Longer class information...
+
+    Attributes:
+        likes_spam: A boolean indicating if we like SPAM or not.
+        eggs: An integer count of the eggs we have laid.
     """
-    def abc(a: int, c = [1,2]):
-        """_summary_
+
+    def __init__(self, likes_spam: bool = False):
+        """Inits SampleClass with blah."""
+        self.likes_spam = likes_spam
+        self.eggs = 0
+
+    def fetch_smalltable_rows(table_handle: smalltable.Table,
+                            keys: Sequence[Union[bytes, str]],
+                            require_all_keys: bool = False,
+        ) -> Mapping[bytes, tuple[str, ...]]:
+        """Fetches rows from a Smalltable.
+
+        Retrieves rows pertaining to the given keys from the Table instance
+        represented by table_handle.  String keys will be UTF-8 encoded.
 
         Args:
-            a (int): _description_
-            c (list, optional): _description_. Defaults to [1,2].
-
-        Raises:
-            AssertionError: _description_
+            table_handle:
+                An open smalltable.Table instance.
+            keys:
+                A sequence of strings representing the key of each table row to
+                fetch.  String keys will be UTF-8 encoded.
+            require_all_keys:
+                If True only rows with values set for all keys will be returned.
 
         Returns:
-            _type_: _description_
+            A dict mapping keys to the corresponding table row data
+            fetched. Each row is represented as a tuple of strings. For
+            example:
 
+            {b'Serak': ('Rigel VII', 'Preparer'),
+            b'Zim': ('Irk', 'Invader'),
+            b'Lrrr': ('Omicron Persei 8', 'Emperor')}
+
+            Returned keys are always bytes.  If a key from the keys argument is
+            missing from the dictionary, then that row was not found in the
+            table (and require_all_keys must have been False).
+
+        Raises:
+            IOError: An error occurred accessing the smalltable.
         """
-        if a > 10:
-            raise AssertionError("a is more than 10")
-
-        return c
 ```
