@@ -51,31 +51,41 @@ if __name__ == "__main__":
 
 ## VSCode拡張機能
 
-### autoDocstring
+### Docstring
 
 クラスやメソッドを書き終わったあと、宣言文の下にクオーテーションを３つ入力し、`Enter`を押すと、Docstringを自動生成できます。
 
-Docstringのスタイルについては[autoDocstring - Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring#:~:text=and%20parameter%20types-,Docstring%20Formats,-To%20turn%20off)を参照。ここでは、Docstringのスタイルに`google`を選択している。
+Docstringのスタイルについては[autoDocstring - Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring#:~:text=and%20parameter%20types-,Docstring%20Formats,-To%20turn%20off)を参照。ここでは、Docstringのスタイルに`google`を選択しています。
 
-以下は、アンダーバー（`_ _`）で囲まれている部分はプレースホルダーです。
+以下は、アンダーバー（`_ _`）で囲まれている部分はプレースホルダーです。具体的な書き方については[Example Google Style Python Docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)を参照してください。
 
 ```python
 # Google Docstring Format
-def abc(a: int, c = [1,2]):
+"""_summary_
+モジュール全体の説明。import文よりも前に書く必要がある。
+"""
+
+import character
+
+class Alphabet:
     """_summary_
-
-    Args:
-        a (int): _description_
-        c (list, optional): _description_. Defaults to [1,2].
-
-    Raises:
-        AssertionError: _description_
-
-    Returns:
-        _type_: _description_
+    クラス全体の説明
     """
-    if a > 10:
-        raise AssertionError("a is more than 10")
+    def abc(a: int, c = [1,2]):
+        """_summary_
 
-    return c
+        Args:
+            a (int): _description_
+            c (list, optional): _description_. Defaults to [1,2].
+
+        Raises:
+            AssertionError: _description_
+
+        Returns:
+            _type_: _description_
+        """
+        if a > 10:
+            raise AssertionError("a is more than 10")
+
+        return c
 ```
