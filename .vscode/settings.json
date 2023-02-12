@@ -124,6 +124,7 @@
         "fenc",
         "goenv",
         "hsenv",
+        "ipynb",
         "isort",
         "jenv",
         "jlenv",
