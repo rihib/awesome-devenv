@@ -57,6 +57,8 @@ if __name__ == "__main__":
 
 Docstringのスタイルについては[autoDocstring - Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring#:~:text=and%20parameter%20types-,Docstring%20Formats,-To%20turn%20off)を参照。ここでは、Docstringのスタイルに`google`を選択している。
 
+以下は、アンダーバー（`_ _`）で囲まれている部分はプレースホルダーです。
+
 ```python
 # Google Docstring Format
 def abc(a: int, c = [1,2]):
