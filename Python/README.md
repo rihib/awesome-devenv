@@ -87,7 +87,7 @@ class Alphabet:
 
         Returns:
             _type_: _description_
-        
+
         """
         if a > 10:
             raise AssertionError("a is more than 10")
