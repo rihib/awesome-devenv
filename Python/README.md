@@ -57,7 +57,7 @@ if __name__ == "__main__":
 
 Docstringのスタイルについては[autoDocstring - Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring#:~:text=and%20parameter%20types-,Docstring%20Formats,-To%20turn%20off)を参照。ここでは、Docstringのスタイルに`google`を選択しています。
 
-以下は、アンダーバー（`_ _`）で囲まれている部分はプレースホルダーです。具体的な書き方については[Example Google Style Python Docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)を参照してください。
+以下は、アンダーバー（`_ _`）で囲まれている部分はプレースホルダーです。具体的な書き方については[Comments and Docstrings - Google Python Style Guide](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)と[Example Google Style Python Docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)を参照してください。
 
 ```python
 # Google Docstring Format
