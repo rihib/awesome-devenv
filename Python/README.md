@@ -62,14 +62,18 @@ Docstringのスタイルについては[autoDocstring - Python Docstring Generat
 ```python
 # Google Docstring Format
 """_summary_
+
 モジュール全体の説明。import文よりも前に書く必要がある。
+
 """
 
 import character
 
 class Alphabet:
     """_summary_
+
     クラス全体の説明
+
     """
     def abc(a: int, c = [1,2]):
         """_summary_
@@ -83,6 +87,7 @@ class Alphabet:
 
         Returns:
             _type_: _description_
+        
         """
         if a > 10:
             raise AssertionError("a is more than 10")
