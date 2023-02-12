@@ -20,6 +20,20 @@ chmod +x <PYTHON_FILE_PATH>
 <PYTHON_FILE_PATH>
 ```
 
+## エンコーディング宣言
+
+UTF-8を文字エンコードとして使用する場合、エンコーディング宣言を書くべきではないと、PEP8には書かれている[^1]ので、通常はエンコーディング宣言を書く必要はない。
+
+```python
+# coding: UTF-8
+```
+
+```python
+# -*- coding: utf-8 -*-    # emacsに自動認識させるための書式
+```
+
+[^1]: [ソースファイルのエンコーディング - pep8-ja](https://pep8-ja.readthedocs.io/ja/latest/#section-9)
+
 ## 型アノテーション
 
 型ヒントの書き方については[typing --- 型ヒントのサポート](https://docs.python.org/ja/3/library/typing.html#module-contents)を参照してください。
