@@ -1,5 +1,9 @@
 """`Python/README.md`に記述されているdoctest用のサンプルファイル。"""
 
+# Stdlib
+import doctest
+
+
 def hello(s: str) -> str:
     """渡された文字列をそのまま出力する。
 
@@ -8,10 +12,13 @@ def hello(s: str) -> str:
 
     Returns:
         s (str): 渡された文字列をそのまま返す。
+
+    >>> from doctest_example import hello
+    >>> hello("Hello, World!")
+    'Hello, World!'
     """
     return s
 
 
 if __name__ == "__main__":
-    import doctest
     doctest.testmod()

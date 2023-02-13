@@ -266,9 +266,7 @@ doctest.testfile("Python/README.md")
 >>> from Python.doctest_example import hello
 >>> hello("Hello, World!")
 'Hello, World!'
-
 >>> n = 9
-
 >>> if n % 15 == 0:
 ...     print("FizzBuzz")
 ... elif n % 3 == 0:
@@ -297,6 +295,36 @@ python Python/doctest_example.py -v    # 詳細な実行結果を出力する
 
 ```bash
 python -m doctest -v Python/doctest_example.py
+```
+
+出力結果に空白行が生じる場合は、`<BLANKLINE>`と表記する必要がある。
+
+```python
+class AnalyzeIris:
+    """Irisデータセットの分析。"""
+
+    def Get(self) -> DataFrame:
+        """表形式のIrisデータセットを取得する。
+
+        Returns:
+            iris_dataframe (DataFrame): irisデータセットが表形式で返される。
+
+        >>> from ETL import AnalyzeIris
+        >>> from pandas import DataFrame
+        >>> import pandas as pd
+        >>> iris: AnalyzeIris = AnalyzeIris()
+        >>> iris_dataframe: DataFrame = iris.Get()
+        >>> pd.set_option("display.max_rows", 4)
+        >>> iris_dataframe
+             sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)  Label
+        0                  5.1               3.5                1.4               0.2      0
+        1                  4.9               3.0                1.4               0.2      0
+        ..                 ...               ...                ...               ...    ...
+        148                6.2               3.4                5.4               2.3      2
+        149                5.9               3.0                5.1               1.8      2
+        <BLANKLINE>
+        [150 rows x 5 columns]
+        """
 ```
 
 ## ロギング
