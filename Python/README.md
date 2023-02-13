@@ -209,11 +209,11 @@ def fetch_smalltable_rows(table_handle: smalltable.Table,
     指定されたキーに対応する行を取得する。 文字列のキーはUTF-8でエンコードされる。
 
     Args:
-        table_handle:
+        table_handle (table):
             オープンな`smalltable`。テーブルインスタンス。
-        keys:
+        keys (str):
             取得する各テーブル行のキーを表す文字列の列。文字列のキーはUTF-8でエンコードされる。
-        require_all_keys:
+        require_all_keys (bool):
             `True`の場合、すべてのキーに値が設定されている行のみが返される。
 
     Returns:
