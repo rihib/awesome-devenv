@@ -384,30 +384,14 @@ poetry install
 poetry shell
 ```
 
-## 2. コーディング
+## 2. コーディングスタイル
 
-### 2.1 型アノテーション
+`Python/README.md`に書かれている内容に従うこと。
 
-### 2.2 docstring
+## 2. テスト
 
-#### 2.2.1 docstringの書き方
+### 2.1 `pre-commit`テスト
 
-#### 2.2.2 doctest
+### 2.2 ユニットテスト
 
-### 2.3 テスト
-
-#### 2.3.1 `pre-commit`テスト
-
-#### 2.3.2 ユニットテスト
-
-ユニットテストは、ユニットのインターフェイス（引数と戻り値）のみに着目します[^1]。ある関数についてユニットテストするには、考えられるあらゆる種類の入力をし、それぞれ適切な出力が返ってくるかをチェックします。
-
-ユニットテストは、コミット前、マージ前、ビルド後などに頻繁に実行することが望ましいです。そのためには高速に実行できるようにする必要があるため、ユニットテストそれ自体とテスト対象のコードのみで独立して実行できるように、モック等を利用して外部依存しないように書く必要があります。
-
-ここに書いてある概要は[Python testing in Visual Studio Code](https://code.visualstudio.com/docs/python/testing#_a-little-background-on-unit-testing)を参照しています。より詳細な概要を知りたい場合は[Unit testing - Wikipedia](https://en.wikipedia.org/wiki/Unit_testing)、具体的な実行方法を知りたい場合は[gwtw/py-sorting - GitHub](https://github.com/gwtw/py-sorting)を参照してください。
-
-##### 2.3.2.1 VSCodeとpytestを使ったユニットテスト
-
-VSCodeとpytestを使ってユニットテストを行います。使い方については[Python testing in Visual Studio Code](https://code.visualstudio.com/docs/python/testing)を参照してください。
-
-### 2.4 ロギング
+VSCodeとpytestを使ってユニットテストを行います。使い方については[Python testing in Visual Studio Code](https://code.visualstudio.com/docs/python/testing)と`Python/pytest/README.md`を参照してください。
