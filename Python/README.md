@@ -315,13 +315,14 @@ class AnalyzeIris:
         >>> iris: AnalyzeIris = AnalyzeIris()
         >>> iris_dataframe: DataFrame = iris.Get()
         >>> pd.set_option("display.max_rows", 4)
+        >>> pd.set_option("display.max_columns", 4)
         >>> iris_dataframe
-             sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)  Label
-        0                  5.1               3.5                1.4               0.2      0
-        1                  4.9               3.0                1.4               0.2      0
-        ..                 ...               ...                ...               ...    ...
-        148                6.2               3.4                5.4               2.3      2
-        149                5.9               3.0                5.1               1.8      2
+             sepal length (cm)  sepal width (cm)  ...  petal width (cm)  Label
+        0                  5.1               3.5  ...               0.2      0
+        1                  4.9               3.0  ...               0.2      0
+        ..                 ...               ...  ...               ...    ...
+        148                6.2               3.4  ...               2.3      2
+        149                5.9               3.0  ...               1.8      2
         <BLANKLINE>
         [150 rows x 5 columns]
         """
