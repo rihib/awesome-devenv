@@ -386,16 +386,22 @@ poetry shell
 
 ## 2. コーディングスタイル
 
-`Python/README.md`に書かれている内容に従うこと。
+- [ ] シバンとエンコーディング宣言は、必要がな場合を除き、原則書かない
+- [ ] 型ヒントを書く
+- [ ] Docstringを書く
+- [ ] コメントを書く
+- [ ] 適切なロギングをする
 
-## 2. テスト
+詳細は`Python/README.md`を参照してください。
 
-### 2.1 doctest
+## 3. テスト
+
+### 3.1 doctest
 
 Docstringにdoctestを書き、`if __name__ == "__main__"`にdoctestの実行コードを記述してください。具体的なやり方については`Python/README.md`を参照してください。
 
-### 2.2 `pre-commit`テスト
+### 3.2 `pre-commit`テスト
 
-### 2.3 ユニットテスト
+### 3.3 ユニットテスト
 
 VSCodeとpytestを使ってユニットテストを行います。使い方については[Python testing in Visual Studio Code](https://code.visualstudio.com/docs/python/testing)と`Python/pytest/README.md`を参照してください。

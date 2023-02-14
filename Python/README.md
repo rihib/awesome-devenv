@@ -34,7 +34,7 @@ UTF-8を文字エンコードとして使用する場合、エンコーディン
 
 [^1]: [ソースファイルのエンコーディング - pep8-ja](https://pep8-ja.readthedocs.io/ja/latest/#section-9)
 
-## 型アノテーション
+## 型ヒント
 
 型ヒントの書き方については[typing --- 型ヒントのサポート](https://docs.python.org/ja/3/library/typing.html#module-contents)を参照してください。
 
