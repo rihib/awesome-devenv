@@ -113,6 +113,8 @@
         "b'Lrrr",
         "blankline",
         "ceintl",
+        "cpufreq",
+        "crbug",
         "crenv",
         "dataframe",
         "denv",
@@ -175,6 +177,7 @@
         "virtualenv",
         "virtualenvs",
         "wayou",
+        "yourusername",
         "yzhang",
     ],
     // Markdown

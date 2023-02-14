@@ -42,6 +42,8 @@ UTF-8を文字エンコードとして使用する場合、エンコーディン
 
 ## コメント
 
+コメントの説明は、[3.8 Comments and Docstrings - Google Python Style Guide](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)を参照しています。
+
 コードのトリッキーな部分についてコメントを書く。複雑な処理の前には複数行のコメントをつける。明らかでないものは、行末にコメントを書く。
 
 また、物語のテキストのように読みやすくする必要がある。断片的な文章ではなく、完全な文章を記述すること。
@@ -59,13 +61,25 @@ if i & (i - 1) == 0:    # `i`が０または２のべき乗のとき真。
 # 次の要素が`i+1`であることを確認する。
 ```
 
+### `TODO`コメント
+
+`TODO`コメントの説明は、[3.12 TODO Comments - Google Python Style Guide](https://google.github.io/styleguide/pyguide.html#312-todo-comments)を参照しています。
+
+`TODO`コメントは、以下の形式で書いてください。また`TODO`が将来的にやるものという形態をとる場合は、非常に具体的にこの`TODO`に取り組む時期を説明部分に含めてください。例えば、非常に具体的な日付（「2009年11月までに修正する」）または非常に具体的なイベント（「すべてのクライアントがXMLレスポンスを処理できるようになったらこのコードを削除する」）などです。
+
+```python
+# TODO(Issueへのリンク、またはこのTODOに対して責任を持つ人の名前): 説明
+# TODO(crbug.com/192795): Investigate cpufreq optimizations.
+# TODO(yourusername): File an issue and use a '*' for repetition.
+```
+
 ## Docstring
 
 ここではGoogleスタイルのDocstringについて説明します。他にもNumpyスタイルなどがあります。
 
 クラスやメソッドを書き終わったあと、宣言文の下にクオーテーションを３つ入力し、`Enter`を押すと、Docstringを自動生成できます。自動生成されるDocstringのスタイルについては[autoDocstring - Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring#:~:text=and%20parameter%20types-,Docstring%20Formats,-To%20turn%20off)を参照してください。
 
-以下の説明は、[Comments and Docstrings - Google Python Style Guide](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)を参照しています。
+Docstringの説明は、[3.8 Comments and Docstrings - Google Python Style Guide](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)を参照しています。
 
 ### Docstringとは
 
