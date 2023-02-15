@@ -3,14 +3,17 @@
     // General
     "recommendations": [
         // GitHub
+        "github.copilot",
         "github.vscode-pull-request-github",
     ],
     "remote.SSH.defaultExtensions": [
         // GitHub
+        "github.copilot",
         "github.vscode-pull-request-github",
     ],
     "dev.containers.defaultExtensions": [
         // GitHub
+        "github.copilot",
         "github.vscode-pull-request-github",
     ],
 }
