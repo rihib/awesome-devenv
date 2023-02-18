@@ -21,7 +21,7 @@
   - [Poetry](https://docs.rihib.dev/Python/Poetry)
   - [pyenv](https://docs.rihib.dev/Python/pyenv)
   - [Pyright](https://docs.rihib.dev/Python/Pyright)
-  - [Pytest](https://docs.rihib.dev/Python/Pytest)
+  - [pytest](https://docs.rihib.dev/Python/pytest)
   - [template](https://docs.rihib.dev/Python/template)
 - [VSCode](https://docs.rihib.dev/VSCode)
 - [YAML](https://docs.rihib.dev/YAML)
