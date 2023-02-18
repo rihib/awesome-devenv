@@ -1,0 +1,134 @@
+{
+    // Personal
+    "workbench.colorTheme": "Default Light+",
+    "workbench.startupEditor": "none",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.openEditors.visible": 0,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.autoIndent": "advanced",
+    "editor.fontSize": 14,
+    "material-icon-theme.activeIconPack": "react",
+    "window.zoomLevel": 1,
+    "vscode-pets.theme": "beach",
+    "vscode-pets.throwBallWithMouse": true,
+    "vscode-pets.petSize": "medium",
+    "powermode.enabled": true,
+    "powermode.presets": "fireworks",
+    "powermode.combo.counterEnabled": "show",
+    "powermode.shake.enabled": false,
+    "powermode.combo.timeout": 1,
+    // Project
+    // General
+    "recommendations": [
+        // Personal
+        "stuyk.powermodesounds",
+        "tonybaloney.vscode-pets",
+	    // C++
+        "ms-vscode.cpptools",
+        // General
+        "christian-kohler.path-intellisense",
+        "emilast.logfilehighligh",
+        "ibm.output-colorizer",
+        "ms-ceintl.vscode-language-pack-ja",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "ms-vsliveshare.vsliveshare",
+        "oderwat.indent-rainbow",
+        "pkief.material-icon-theme",
+        "ritwickdey.liveserver",
+        "shardulm94.trailing-spaces",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens",
+        "gruntfuggly.todo-tree",
+        "mosapride.zenkaku",
+        // Git
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        // GitHub
+        "github.copilot",
+        "github.vscode-pull-request-github",
+    ],
+    "remote.SSH.defaultExtensions": [
+        // Personal
+        "stuyk.powermodesounds",
+        "tonybaloney.vscode-pets",
+        // C++
+        "ms-vscode.cpptools",
+        // General
+        "christian-kohler.path-intellisense",
+        "emilast.logfilehighligh",
+        "ibm.output-colorizer",
+        "ms-ceintl.vscode-language-pack-ja",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "ms-vsliveshare.vsliveshare",
+        "oderwat.indent-rainbow",
+        "pkief.material-icon-theme",
+        "ritwickdey.liveserver",
+        "shardulm94.trailing-spaces",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens",
+        "gruntfuggly.todo-tree",
+        "mosapride.zenkaku",
+        // Git
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        // GitHub
+        "github.copilot",
+        "github.vscode-pull-request-github",
+    ],
+    "dev.containers.defaultExtensions": [
+        // Personal
+        "stuyk.powermodesounds",
+        "tonybaloney.vscode-pets",
+        // C++
+        "ms-vscode.cpptools",
+        // General
+        "christian-kohler.path-intellisense",
+        "emilast.logfilehighligh",
+        "ibm.output-colorizer",
+        "ms-ceintl.vscode-language-pack-ja",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "ms-vsliveshare.vsliveshare",
+        "oderwat.indent-rainbow",
+        "pkief.material-icon-theme",
+        "ritwickdey.liveserver",
+        "shardulm94.trailing-spaces",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens",
+        "gruntfuggly.todo-tree",
+        "mosapride.zenkaku",
+        // Git
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        // GitHub
+        "github.copilot",
+        "github.vscode-pull-request-github",
+    ],
+    "liveServer.settings.donotVerifyTags": true,
+    "files.autoGuessEncoding": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "files.insertFinalNewline": true,
+    "cSpell.ignoreWords": [
+        // アルファベット順・小文字のみ
+        "ceintl",
+        "donot",
+        "eamodio",
+        "errorlens",
+        "extensionpack",
+        "kohler",
+        "liveserver",
+        "mhutchie",
+        "oderwat",
+        "pkief",
+        "powermode",
+        "ritwickdey",
+        "shardulm",
+        "usernamehw",
+    ],
+}

@@ -52,7 +52,7 @@
 ```json
 {
     // Personal
-    "powermode.enabled": true
+    "powermode.enabled": true,
     "powermode.presets": "fireworks",
     "powermode.combo.counterEnabled": "show",
     "powermode.shake.enabled": false,
