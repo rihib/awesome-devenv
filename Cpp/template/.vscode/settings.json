@@ -27,7 +27,7 @@
         "stuyk.powermodesounds",
         "tonybaloney.vscode-pets",
 	    // C++
-        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
         // General
         "christian-kohler.path-intellisense",
         "emilast.logfilehighligh",
@@ -55,7 +55,7 @@
         "stuyk.powermodesounds",
         "tonybaloney.vscode-pets",
         // C++
-        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
         // General
         "christian-kohler.path-intellisense",
         "emilast.logfilehighligh",
@@ -83,7 +83,7 @@
         "stuyk.powermodesounds",
         "tonybaloney.vscode-pets",
         // C++
-        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
         // General
         "christian-kohler.path-intellisense",
         "emilast.logfilehighligh",
