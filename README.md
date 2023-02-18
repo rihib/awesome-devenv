@@ -8,6 +8,7 @@
 - [anyenv](https://docs.rihib.dev/anyenv)
 - [AWS](https://docs.rihib.dev/AWS)
   - [Cloud9](https://docs.rihib.dev/AWS/Cloud9)
+- [C++](https://docs.rihib.dev/Cpp)
 - [CSV, TSV](https://docs.rihib.dev/CSV-TSV)
 - [Docker](https://docs.rihib.dev/Docker)
 - [General](https://docs.rihib.dev/General)
