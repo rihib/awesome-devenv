@@ -6,4 +6,5 @@
 
 ```bash
 g++ -o your_file.out your_file.cpp
+./your_file.out
 ```
