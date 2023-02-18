@@ -1,0 +1,19 @@
+{
+    // Project
+    // General
+    "recommendations": [
+	    // C++
+        "ms-vscode.cpptools",
+    ],
+    "remote.SSH.defaultExtensions": [
+        // C++
+        "ms-vscode.cpptools",
+    ],
+    "dev.containers.defaultExtensions": [
+        // C++
+        "ms-vscode.cpptools",
+    ],
+    "cSpell.ignoreWords": [
+        // アルファベット順・小文字のみ
+    ],
+}
