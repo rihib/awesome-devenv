@@ -16,4 +16,6 @@
     "cSpell.ignoreWords": [
         // アルファベット順・小文字のみ
     ],
+    // C++
+	"C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4}",
 }
