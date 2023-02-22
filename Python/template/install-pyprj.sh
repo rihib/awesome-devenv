@@ -19,7 +19,7 @@ echo -e "\n\n# begin awesome-pydevenv\n" >> ~/.profile
 
 # 必要なパッケージをインストールする
 sudo apt update
-sudo apt install libbz2-dev
+sudo apt install -y libbz2-dev
 
 # 環境変数`<PRJ_NAME>_ROOT`を作成
 echo "export ${PRJ_ROOT}=${PRJ_ROOT_PATH}" >> ~/.bashrc
