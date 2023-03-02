@@ -2,7 +2,12 @@
 
 ## 実行方法
 
-`o`オプションで実行ファイルの名前を指定できる。
+コンパイラは、GCCとClangの２つが使用できる。一般的にClangの方が性能がいいとされる。どちらもコンパイル時に、`o`オプションで実行ファイルの名前を指定できる。
+
+```bash
+clang++ -o your_file.out your_file.cpp
+./your_file.out
+```
 
 ```bash
 g++ -o your_file.out your_file.cpp
