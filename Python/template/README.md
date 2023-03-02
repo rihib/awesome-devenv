@@ -264,11 +264,7 @@ if [ "$PS1" != "" ]; then
 このドキュメントと同じディレクトリにある`install-pyprj.sh`をサーバーの任意の場所に置き、変数の値を適切なものに変更してください。変更したら、以下のコマンドで実行すると自動で環境構築が行われます。
 
 ```bash
-source /path/to/create-pyprj.sh
-```
-
-```bash
-poetry install
+source /path/to/install-pyprj.sh
 ```
 
 最後に、一旦SSH接続を切り、再度接続し直してください。再接続時に拡張機能がインストールされます。
